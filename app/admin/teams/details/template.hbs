@@ -1,0 +1,22 @@
+<h1 class='team-detail__title'>{{model.city}} {{model.name}}</h1>
+<ul class="team-details__ul">
+  <li class="team-details__li">
+    City: {{model.city}}
+  </li>
+  <li class="team-details__li">
+    Team Name: {{model.name}}
+  </li>
+  <li class="team-details__li">
+    Football Conference: {{model.conference}}
+  </li>
+  <li class="team-details__li">
+    Conference Division: {{model.division}}
+  </li>
+  <li class="team-details__li">
+    About the {{model.name}}: {{model.description}}
+  </li>
+</ul>
+<div class="team-details_btns">
+    {{#link-to 'admin.teams'}}{{mdl-icon icon='arrow_back'}} {{/link-to}}
+    {{#link-to 'admin.teams.edit' model}}{{mdl-icon icon='edit'}}{{/link-to}}
+</div>

@@ -10,6 +10,14 @@ Router.map(function() {
   this.route('admin', function() {
     this.route('teams', function() {
       this.route('new');
+
+      this.route('details', {
+        path: '/:team_id',
+      });
+
+      this.route('edit', {
+        path: '/:team_id/edit',
+      });
     });
   });
 });

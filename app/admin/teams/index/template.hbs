@@ -1,11 +1,16 @@
+
 <h2 class="team-list-title">Current Teams</h2>
 <ul class="admin-team-list">
   {{#each model as |teamList|}}
   <li class="admin-team-list__team">
-    {{teamList.city}}{{teamList.name}}
+    {{#link-to 'admin.teams.details' teamList}}{{teamList.city}} {{teamList.name}}{{/link-to}}
   </li>
   {{/each}}
 </ul>
+{{#link-to 'admin'}}
+  {{mdl-button isFloating=true icon='arrow_back'}}
+{{/link-to}}
+
 {{#link-to 'admin.teams.new'}}
   {{mdl-button isFloating=true icon='add'}}
 {{/link-to}}

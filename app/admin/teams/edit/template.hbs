@@ -1,0 +1,14 @@
+{{outlet}}
+
+<h2 class="new-team-form__title">Edit The {{model.city}} {{model.name}}</h2>
+
+{{#simple-form class="new-team-form" onsubmit="saveTeam" as |formValues|}}
+  {{mdl-textfield   class="new-team-form__input" label='City' value=formValues.city}}
+  {{mdl-textfield   class="new-team-form__input" label='Team Name' value=formValues.name}}
+  {{mdl-textfield   class="new-team-form__input" label='Conference' value=formValues.conference}}
+  {{mdl-textfield   class="new-team-form__input" label='Division' value=formValues.division}}
+  {{mdl-textarea   class="new-team-form__input" label="About"
+  	value=formValues.description}}
+
+  {{mdl-button isFloating=true icon='add'}}
+{{/simple-form}}

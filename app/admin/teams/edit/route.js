@@ -1,16 +1,14 @@
 import Ember from 'ember';
 
+
 export default Ember.Route.extend({
-  model() {
-    this.store.findAll('team');
-  },
 
   actions: {
-    addNewTeam(formData) {
-      let newTeam = this.store.createRecord('team');
+    saveTeam(formData) {
+      let newTeam = this.store.modelFor('team');
       newTeam.setProperties(formData);
       newTeam.save().then(() => {
-        this.transitionTo('admin.teams');
+        this.transitionTo('admin.team.details');
       });
     },
   },
