@@ -7,7 +7,11 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('teams');
-  this.route('admin');
+  this.route('admin', function() {
+    this.route('teams', function() {
+      this.route('new');
+    });
+  });
 });
 
 export default Router;
