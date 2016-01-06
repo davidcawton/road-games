@@ -1,0 +1,7 @@
+{{outlet}}
+{{#simple-form onsubmit="loginUser" as |login|}}
+  {{input placeholder="Username" value=login.email}}
+  {{input placeholder="Password" type="password" value=login.password}}
+  <button>Login</button>
+
+{{/simple-form}}
