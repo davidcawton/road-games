@@ -2,7 +2,7 @@
   <li class="game-li">{{mdl-textfield class="new-game-form__input" label='Date' value=formValues.Date}}</li>
 
   <li class="game-li">
-    {{#x-select value=model.game.homeTeam action=(mut formValues.homeTeam)}}
+    {{#x-select value=model.game.homeTeam.content value=(mut model.game.homeTeam)}}
       <option>Select A Team</option>
       {{#each model.teams as |team|}}
         {{#x-option value=team}}{{team.name}}{{/x-option}}
@@ -12,7 +12,7 @@
   <li class="game-li">{{mdl-textfield class="new-game-form__input" label='Home Score' value=formValues.homeScore}}</li>
 
   <li class="game-li">
-    {{#x-select value=model.game.awayTeam action=(mut formValues.awayTeam)}}
+    {{#x-select value=model.game.awayTeam.content value=(mut model.game.awayTeam)}}
       <option>Select A Team</option>
       {{#each model.teams as |team|}}
         {{#x-option value=team}}{{team.name}}{{/x-option}}
@@ -22,7 +22,7 @@
   <li class="game-li">{{mdl-textfield class="new-game-form__input" label='Away Score' value=formValues.awayScore}}</li>
 
   <li class="game-li">
-    {{#x-select value=model.game.winningTeam action=(mut formValues.winningTeam)}}
+    {{#x-select value=model.game.winningTeam.content value=(mut model.game.winningTeam)}}
       <option>Select A Team</option>
       {{#each model.teams as |team|}}
         {{#x-option value=team}}{{team.name}}{{/x-option}}
