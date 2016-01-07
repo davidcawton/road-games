@@ -1,16 +1,16 @@
-<h1 class='game-detail__title'>{{model.homeTeam}} vs.  {{model.awayTeam}}</h1>
+<h1 class='game-detail__title'>{{model.awayTeam.name}} vs.  {{model.homeTeam.name}}</h1>
 <ul class="game-details__ul">
   <li class="game-details__li">
   Game Date  : {{model.date}}
   </li>
   <li class="game-details__li">
-    Home Team: {{model.homeTeam}}  {{model.homeScore}}
+    Home Team: {{model.homeTeam.name}}  {{model.homeScore}}
   </li>
   <li class="game-details__li">
-    Away Team: {{model.awayTeam}}  {{model.awayScore}}
+    Away Team: {{model.awayTeam.name}}  {{model.awayScore}}
   </li>
   <li class="game-details__li">
-    Winner: {{model.winningTeam}}
+    Winner: {{model.winningTeam.name}}
   </li>
 </ul>
 

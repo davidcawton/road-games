@@ -1,8 +1,8 @@
 {{outlet}}
 
-<h2 class="new-game-form__title">Edit The {{model.city}} {{model.name}}</h2>
+<h2 class="new-game-form__title">Edit The {{model.game.awayTeam.name}} @ {{model.game.homeTeam.name}}</h2>
 
-{{#simple-form class="new-game-form" startingValues=model onsubmit="saveGame" as |formValues|}}
+{{#simple-form class="new-game-form" startingValues=model.game onsubmit="saveGame" as |formValues|}}
   {{partial 'admin/games/form'}}
 
   {{mdl-button isFloating=true icon='add'}}

@@ -3,7 +3,7 @@
 <ul class="admin-game-list">
   {{#each model as |gameList|}}
   <li class="admin-game-list__game">
-    {{#link-to 'admin.games.details' gameList}}{{gameList.homeTeam}} {{gameList.awayTeam}}{{/link-to}}
+    {{#link-to 'admin.games.details' gameList}}{{gameList.awayTeam.name}} @ {{gameList.homeTeam.name}}{{/link-to}}
   </li>
   {{/each}}
 </ul>
