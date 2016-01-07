@@ -1,21 +1,40 @@
 <h1 class='team-detail__title'>{{model.city}} {{model.name}}</h1>
 <ul class="team-details__ul">
   <li class="team-details__li">
-    City: {{model.city}}
+    Year Established: {{model.established}}
   </li>
   <li class="team-details__li">
-    Team Name: {{model.name}}
+    Historic Record: {{model.totalRecord}}
   </li>
   <li class="team-details__li">
-    Football Conference: {{model.conference}}
+    Where Do the {{model.name}} play?: {{model.stadiumName}}
   </li>
   <li class="team-details__li">
-    Conference Division: {{model.division}}
+    Conference: {{model.conference}}
   </li>
   <li class="team-details__li">
-    About the {{model.name}}: {{model.description}}
+    Division: {{model.division}}
   </li>
 </ul>
+
+<ul class="team-details__ul"> More Info
+  <li class="team-details__li">
+    Team Owner: {{model.owner}}
+  </li>
+  <li class="team-details__li">
+    General Manager: {{model.generalManager}}
+  </li>
+  <li class="team-details__li">
+    Coach: {{model.coach}}
+  </li>
+  <li class="team-details__li">
+    Coach Record: {{model.coachRecord}}
+  </li>
+  <li class="team-details__li">
+    Star Player: {{model.startPlayer}}
+  </li>
+</ul>
+
 <div class="team-details_btns">
     {{#link-to 'admin.teams'}}{{mdl-icon icon='arrow_back'}} {{/link-to}}
     {{#link-to 'admin.teams.edit' model}}{{mdl-icon icon='edit'}}{{/link-to}}

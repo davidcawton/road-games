@@ -4,10 +4,17 @@ export default Ember.Route.extend({
 
   actions: {
     saveTeam(formData) {
-      let newTeam = this.store.push('team');
-      newTeam.setProperties(formData);
-      newTeam.save().then(() => {
-        this.transitionTo('admin.team.details');
+      let team = this.modelFor(this.routeName);
+      team.setProperties(formData);
+      team.save().then(() => {
+        this.transitionTo('admin.teams.details', team);
+      });
+    },
+
+    removeTeam() {
+      let team = this.modelFor(this.routeName);
+      team.destroyRecord().then(() => {
+        this.transitionTo('admin.teams');
       });
     },
   },
