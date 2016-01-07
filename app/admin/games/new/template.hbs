@@ -1,0 +1,7 @@
+<h1 class="new-game-form__title">Create A New Game</h1>
+
+{{#simple-form class="new-game-form" onsubmit="addNewGame" as |formValues|}}
+  {{partial 'admin/games/form'}}
+
+  {{mdl-button isFloating=true icon='add'}}
+{{/simple-form}}

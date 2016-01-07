@@ -19,6 +19,18 @@ Router.map(function() {
         path: '/:team_id/edit',
       });
     });
+
+    this.route('games', function() {
+      this.route('new');
+
+      this.route('edit', {
+        path: '/:game_id/edit',
+      });
+
+      this.route('details', {
+        path: '/:game_id',
+      });
+    });
   });
 
   this.route('register');

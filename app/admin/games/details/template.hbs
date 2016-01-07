@@ -1,0 +1,20 @@
+<h1 class='game-detail__title'>{{model.homeTeam}} vs.  {{model.awayTeam}}</h1>
+<ul class="game-details__ul">
+  <li class="game-details__li">
+  Game Date  : {{model.date}}
+  </li>
+  <li class="game-details__li">
+    Home Team: {{model.homeTeam}}  {{model.homeScore}}
+  </li>
+  <li class="game-details__li">
+    Away Team: {{model.awayTeam}}  {{model.awayScore}}
+  </li>
+  <li class="game-details__li">
+    Winner: {{model.winningTeam}}
+  </li>
+</ul>
+
+<div class="game-details_btns">
+    {{#link-to 'admin.games'}}{{mdl-icon icon='arrow_back'}} {{/link-to}}
+    {{#link-to 'admin.games.edit' model}}{{mdl-icon icon='edit'}}{{/link-to}}
+</div>

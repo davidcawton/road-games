@@ -1,0 +1,16 @@
+
+<h2 class="game-list-title">Current Games</h2>
+<ul class="admin-game-list">
+  {{#each model as |gameList|}}
+  <li class="admin-game-list__game">
+    {{#link-to 'admin.games.details' gameList}}{{gameList.homeTeam}} {{gameList.awayTeam}}{{/link-to}}
+  </li>
+  {{/each}}
+</ul>
+{{#link-to 'admin'}}
+  {{mdl-button isFloating=true icon='arrow_back'}}
+{{/link-to}}
+
+{{#link-to 'admin.games.new'}}
+  {{mdl-button isFloating=true icon='add'}}
+{{/link-to}}
