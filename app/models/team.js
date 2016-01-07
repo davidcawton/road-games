@@ -11,7 +11,9 @@ export default DS.Model.extend({
   stadiumName: DS.attr('string'),
   owner: DS.attr('string'),
   coach: DS.attr('string'),
-  coachRecord: DS.attr('number'),
+  coachWins: DS.attr('number'),
+  coachLosses: DS.attr('number'),
+  coachTies: DS.attr('number'),
   generalManager: DS.attr('string'),
   startPlayer: DS.attr('string'),
   description: DS.attr('string'),
@@ -25,5 +27,13 @@ export default DS.Model.extend({
     let totalTies = this.get('totalTies');
 
     return totalWins + '-' + totalLosses + '-' + totalTies;
+  }),
+
+  coachRecord: Ember.computed('coachWins', 'coachLosses', 'coachTies', function() {
+    let coachWins = this.get('coachWins');
+    let coachLosses = this.get('coachLosses');
+    let coachTies = this.get('coachTies');
+
+    return coachWins + '-' + coachLosses + '-' + coachTies;
   }),
 });
