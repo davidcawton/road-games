@@ -1,8 +1,53 @@
 {{outlet}}
 
-{{#simple-form onsubmit="loginUser" as |login|}}
-  {{input placeholder="Username" value=login.email}}
-  {{input placeholder="Password" type="password" value=login.password}}
-  <button>Login</button>
+<h1 class="login-title">Road Game</h1>
+<img class="login-hero" src="/team-logos/roadgamemap.png" alt="">
 
-{{/simple-form}}
+<div class="login-form">
+  {{#simple-form onsubmit="loginUser" as |login|}}
+    <p class="login-form__graph">{{mdl-textfield label="Email" value=login.email}}</p>
+    <p class="login-form__graph">{{mdl-textfield label="Password" type="password" value=login.password}}</p>
+    <p class="login-form__graph">
+      {{#mdl-button}}Login{{/mdl-button}}
+      {{#link-to 'register'}}
+        {{#mdl-button}}Register{{/mdl-button}}
+      {{/link-to}}
+    </p>
+  {{/simple-form}}
+</div>
+
+
+
+
+<style>
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    max-width: 50%;
+  }
+
+  .login-form__graph {
+    text-align: center;
+  }
+
+
+  .login-title  {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    border: 5px dotted #000;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .login-hero {
+    display: flex;
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+  }
+</style>

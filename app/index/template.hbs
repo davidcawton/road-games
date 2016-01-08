@@ -1,0 +1,36 @@
+<h1 class="login-title">Road Game</h1>
+<img class="login-hero" src="/team-logos/roadgamemap.png" alt="">
+<p class="login-form__graph">
+  {{#link-to 'login'}}{{#mdl-button}}Login{{/mdl-button}}{{/link-to}}
+  {{#link-to 'register'}}{{#mdl-button}}Register{{/mdl-button}}{{/link-to}}
+</p>
+
+
+
+<style>
+.login-form__graph {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+  .login-title  {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    border: 5px dotted #000;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .login-hero {
+    display: flex;
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+  }
+</style>
