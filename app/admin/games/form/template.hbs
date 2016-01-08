@@ -1,32 +1,69 @@
-<ul class="section-title">Game Summary
-  <li class="game-li">{{mdl-textfield class="new-game-form__input" label='Date' value=formValues.Date}}</li>
+<div class="create-a-game__form">
+  <ul class="create-a-game__ul">
+    <li class="create-a-game__li">
+      <label class='game-label'>Home Team: <strong>{{if model.game.homeTeam model.game.homeTeam.name 'Choose a Home Team'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.game.homeTeam) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-a-game__li">{{mdl-textfield class="new-game-form__input" label='Home Score' type='number' value=formValues.homeScore}}</li>
+  </ul>
 
-  <li class="game-li">
-    {{#x-select value=model.game.homeTeam.content value=(mut model.game.homeTeam)}}
-      <option>Select A Team</option>
-      {{#each model.teams as |team|}}
-        {{#x-option value=team}}{{team.name}}{{/x-option}}
-      {{/each}}
-    {{/x-select}}
-  </li>
-  <li class="game-li">{{mdl-textfield class="new-game-form__input" label='Home Score' value=formValues.homeScore}}</li>
+  <ul class="create-a-game__ul">
+    <li class="create-a-game__li">
+      <label class='game-label'>Away Team: <strong>{{if model.game.awayTeam model.game.awayTeam.name 'Choose an Away Team'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.game.awayTeam) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-a-game__li">{{mdl-textfield class="new-game-form__input" label='Away Score' type='number' value=formValues.awayScore}}</li>
+  </ul>
 
-  <li class="game-li">
-    {{#x-select value=model.game.awayTeam.content value=(mut model.game.awayTeam)}}
-      <option>Select A Team</option>
-      {{#each model.teams as |team|}}
-        {{#x-option value=team}}{{team.name}}{{/x-option}}
-      {{/each}}
-    {{/x-select}}
-  </li>
-  <li class="game-li">{{mdl-textfield class="new-game-form__input" label='Away Score' value=formValues.awayScore}}</li>
+  <ul class="create-a-game__ul">
+    <li class="create-a-game__li">
+      <label class='game-label'>Winner: <strong>{{if model.game.winningTeam model.game.winningTeam.name 'Choose a Winner'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.game.winningTeam) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-a-game__li">{{mdl-textfield class="new-game-form__input" type='date' value=formValues.Date}}</li>
+  </ul>
+</div>
 
-  <li class="game-li">
-    {{#x-select value=model.game.winningTeam.content value=(mut model.game.winningTeam)}}
-      <option>Select A Team</option>
-      {{#each model.teams as |team|}}
-        {{#x-option value=team}}{{team.name}}{{/x-option}}
-      {{/each}}
-    {{/x-select}}
-  </li>
-</ul>
+  <style media="screen">
+
+    .create-a-game__form {
+      justify-content: center;
+      margin: auto;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .create-a-game__ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      padding-left: 0;
+      flex: 1;
+      margin-bottom: 10px;
+    }
+
+    .create-a-game__li {
+      font-family: 'Black Ops One', sans-serif;
+      font-size: 24px;
+      list-style: none;
+    }
+
+    .game-label {
+      text-align: center;
+      color: #0ea33b;
+      margin-top: 10px;
+    }
+  </style>

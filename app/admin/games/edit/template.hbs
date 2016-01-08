@@ -1,11 +1,35 @@
 {{outlet}}
 
-<h2 class="new-game-form__title">Edit The {{model.game.awayTeam.name}} @ {{model.game.homeTeam.name}}</h2>
+<h2 class="edit-game-form__title">Edit The {{model.game.awayTeam.name}} @ {{model.game.homeTeam.name}}</h2>
 
 {{#simple-form class="new-game-form" startingValues=model.game onsubmit="saveGame" as |formValues|}}
   {{partial 'admin/games/form'}}
 
-  {{mdl-button isFloating=true icon='add'}}
-  {{mdl-button action='removeGame' isFloating=true icon='delete'}}
-
+<div class="edit-game-form__btns">
+    {{mdl-button class='edit-game-btn' isFloating=true icon='add'}}
+    {{mdl-button class='edit-game-btn' action='removeGame' isFloating=true icon='delete'}}
+</div>
 {{/simple-form}}
+
+<style>
+
+  .edit-game-form__title {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .edit-game-form__btns {
+    display: flex;
+    justify-content:center;
+    margin: auto;
+  }
+
+  .edit-game-btn {
+    margin: 10px;
+  }
+
+</style>

@@ -3,5 +3,33 @@
 {{#simple-form class="new-game-form" onsubmit="addNewGame" as |formValues|}}
   {{partial 'admin/games/form'}}
 
-  {{mdl-button isFloating=true icon='add'}}
-{{/simple-form}}
+<div class="new-game-form__btns">
+    {{#link-to 'admin.games'}}{{mdl-button class="new-game-btn" isFloating=true icon='arrow_back'}}{{/link-to}}
+    {{mdl-button class="new-game-btn" isFloating=true icon='add'}}
+</div>
+
+  {{/simple-form}}
+
+<style media="screen">
+
+  .new-game-form__title {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .new-game-form__btns {
+    display: flex;
+    justify-content:center;
+    margin: auto;
+  }
+
+  .new-game-btn {
+    margin: 10px;
+  }
+
+
+</style>
