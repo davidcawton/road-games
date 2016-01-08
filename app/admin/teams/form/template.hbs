@@ -1,31 +1,66 @@
-<ul class="section-title">Team Info
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='City' value=formValues.city}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Team Name' value=formValues.name}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Year Established' value=formValues.established}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Stadium Name' value=formValues.stadiumName}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Conference' value=formValues.conference}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Division' value=formValues.division}}</li>
-</ul>
+<div class="new-team-form">
+  <ul class="new-team-form-ul">
+    <li class="new-team-form__li new-team-form__li-title">Team Info</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='City' value=formValues.city}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Team Name' value=formValues.name}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Year Established' value=formValues.established}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Stadium Name' value=formValues.stadiumName}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Conference' value=formValues.conference}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Division' value=formValues.division}}</li>
+  </ul>
+  <ul class="new-team-form-ul">
+    <li class="new-team-form__li new-team-form__li-title">Team Record</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Total Wins' value=formValues.totalWins}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Total Losses' value=formValues.totalLosses}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Total Ties' value=formValues.totalTies}}</li>
+  </ul>
 
-<ul class="section-title">Team Record
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Total Wins' value=formValues.totalWins}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Total Losses' value=formValues.totalLosses}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Total Ties' value=formValues.totalTies}}</li>
-</ul>
+  <ul class="new-team-form-ul">
+    <li class="new-team-form__li new-team-form__li-title">Team Management</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Team Owner' value=formValues.owner}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='General Manager' value=formValues.generalManager}}</li>
+  </ul>
 
-<ul class="section-title">Team Management
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Team Owner' value=formValues.owner}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='General Manager' value=formValues.generalManager}}</li>
-</ul>
+  <ul class="new-team-form-ul">
+    <li class="new-team-form__li new-team-form__li-title">Coaching</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Coach' value=formValues.coach}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Wins' value=formValues.coachWins}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Losses' value=formValues.coachLosses}}</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Ties' value=formValues.coachTies}}</li>
+  </ul>
 
-<ul class="section-title">Coaching
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Coach' value=formValues.coach}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Wins' value=formValues.coachWins}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Losses' value=formValues.coachLosses}}</li>
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Ties' value=formValues.coachTies}}</li>
-</ul>
+  <ul class="new-team-form-ul">
+    <li class="new-team-form__li new-team-form__li-title">More Info</li>
+    <li class="new-team-form__li">{{mdl-textfield class="new-team-form__input" label='Star Player' value=formValues.startPlayer}}</li>
+    <li class="new-team-form__li">{{mdl-textarea class="new-team-form__input" label="About"  value=formValues.description}}</li>
+  </ul>
+</div>
 
-<ul class="section-title">More Info
-  <li class="team-li">{{mdl-textfield class="new-team-form__input" label='Star Player' value=formValues.startPlayer}}</li>
-  <li class="team-li">{{mdl-textarea class="new-team-form__input" label="About"	value=formValues.description}}</li>
-</ul>
+<style>
+
+.new-team-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.new-team-form__ul {
+  padding-left: 0;
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.new-team-form__li {
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 24px;
+  list-style: none;
+}
+
+.new-team-form__li-title {
+  text-align: center;
+  color: #0ea33b;
+  margin-top: 10px;
+}
+
+</style>

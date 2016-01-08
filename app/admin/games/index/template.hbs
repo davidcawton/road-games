@@ -1,5 +1,5 @@
 
-<h2 class="game-list-title">Current Games</h2>
+<h2 class="admin-game-list__title">Current Games</h2>
 <ul class="admin-game-list">
   {{#each model as |gameList|}}
   <li class="admin-game-list__game">
@@ -7,10 +7,65 @@
   </li>
   {{/each}}
 </ul>
-{{#link-to 'admin'}}
-  {{mdl-button isFloating=true icon='arrow_back'}}
-{{/link-to}}
 
-{{#link-to 'admin.games.new'}}
-  {{mdl-button isFloating=true icon='add'}}
-{{/link-to}}
+<div class="current-game-btns">
+  {{#link-to 'admin'}}
+    {{mdl-button class='game-btn' isFloating=true icon='arrow_back'}}
+  {{/link-to}}
+
+  {{#link-to 'admin.games.new'}}
+    {{mdl-button class='game-btn' isFloating=true icon='add'}}
+  {{/link-to}}
+</div>
+
+
+<style>
+  .admin-game-list__title {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .admin-game-list {
+    display: flex;
+    padding-left: 0;
+    padding: 10px;
+    margin-top: 40px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .admin-game-list__game, .admin-game-list__game a {
+    list-style: none;
+    padding: 5px;
+    font-family: 'Black Ops One', sans-serif;
+    color: #eee;
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  .admin-game-list__game a:hover {
+    color: #74d090;
+  }
+
+  .current-game-btns {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .game-btn {
+    margin: 10px;
+  }
+
+
+
+</style>

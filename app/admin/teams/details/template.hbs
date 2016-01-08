@@ -1,44 +1,67 @@
 <h1 class='team-detail__title'>{{model.city}} {{model.name}}</h1>
-<ul class="team-details__ul">
-  <li class="team-details__li">
-    Year Established: {{model.established}}
-  </li>
-  <li class="team-details__li">
-    Historic Record: {{model.totalRecord}}
-  </li>
-  <li class="team-details__li">
-    Where Do the {{model.name}} play? {{model.stadiumName}}
-  </li>
-  <li class="team-details__li">
-    Conference: {{model.conference}}
-  </li>
-  <li class="team-details__li">
-    Division: {{model.division}}
-  </li>
-</ul>
-
-<ul class="team-details__ul"> More Info
-  <li class="team-details__li">
-    Team Owner: {{model.owner}}
-  </li>
-  <li class="team-details__li">
-    General Manager: {{model.generalManager}}
-  </li>
-  <li class="team-details__li">
-    Coach: {{model.coach}}
-  </li>
-  <li class="team-details__li">
-    Coach Record: {{model.coachRecord}}
-  </li>
-  <li class="team-details__li">
-    Star Player: {{model.startPlayer}}
-  </li>
-  <li class="team-details__li">
-    Fun Fact: {{model.description}}
-  </li>
-</ul>
+<div class="team-details">
+  <ul class="team-details__ul">
+    <li class="team-details__li">Year Established: {{model.established}}</li>
+    <li class="team-details__li">Historic Record: {{model.totalRecord}}</li>
+    <li class="team-details__li">Where Do the {{model.name}} play? {{model.stadiumName}}</li>
+    <li class="team-details__li">Conference: {{model.conference}}</li>
+    <li class="team-details__li">Division: {{model.division}}</li>
+  </ul>
+  <ul class="team-details__ul">
+    <li class="team-details__li">Team Owner: {{model.owner}}</li>
+    <li class="team-details__li">General Manager: {{model.generalManager}}</li>
+    <li class="team-details__li">Coach: {{model.coach}}</li>
+    <li class="team-details__li">Coach Record: {{model.coachRecord}}</li>
+    <li class="team-details__li">Star Player: {{model.startPlayer}}</li>
+    <li class="team-details__li">Fun Fact: {{model.description}}</li>
+  </ul>
+</div>
 
 <div class="team-details_btns">
-    {{#link-to 'admin.teams'}}{{mdl-icon icon='arrow_back'}} {{/link-to}}
-    {{#link-to 'admin.teams.edit' model}}{{mdl-icon icon='edit'}}{{/link-to}}
+  {{#link-to 'admin.teams'}}{{mdl-icon class='detail-btn' icon='arrow_back'}} {{/link-to}}
+  {{#link-to 'admin.teams.edit' model}}{{mdl-icon class='detail-btn' icon='edit'}}{{/link-to}}
 </div>
+
+
+<style>
+  .team-detail__title {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .team-details {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-family: 'Black Ops One', sans-serif;
+  }
+
+  .team-details__li {
+    list-style: square;
+  }
+
+  .new-team-form__btns {
+    display: flex;
+    justify-content:center;
+    margin: auto;
+  }
+
+  .new-form-btn {
+    margin: 10px;
+  }
+
+  .team-details_btns {
+    display: flex;
+    justify-content:center;
+    margin: auto;
+  }
+
+  .detail-btn {
+      margin: 10px;
+  }
+
+</style>

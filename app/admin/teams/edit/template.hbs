@@ -1,11 +1,33 @@
 {{outlet}}
 
-<h2 class="new-team-form__title">Edit The {{model.city}} {{model.name}}</h2>
+<h2 class="edit-team-form__title">Edit The {{model.city}} {{model.name}}</h2>
 
 {{#simple-form class="new-team-form" startingValues=model onsubmit="saveTeam" as |formValues|}}
   {{partial 'admin/teams/form'}}
-
-  {{mdl-button isFloating=true icon='add'}}
-  {{mdl-button action='removeTeam' isFloating=true icon='delete'}}
-
+<div class="edit-team-form__btns">
+    {{mdl-button class='edit-form-btn' isFloating=true icon='check_circle'}}
+    {{mdl-button class='edit-form-btn' action='removeTeam' isFloating=true icon='delete'}}
+</div>
 {{/simple-form}}
+
+
+<style>
+.edit-team-form__title {
+  font-family: 'Black Ops One', sans-serif;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.edit-team-form__btns {
+  display: flex;
+  justify-content:center;
+  margin: auto;
+}
+
+.edit-form-btn {
+  margin: 10px;
+}
+</style>

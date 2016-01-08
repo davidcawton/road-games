@@ -1,8 +1,31 @@
 <h1 class="new-team-form__title">Create A New Team</h1>
-<h3 class="new-team-form_sub-title">Enter Details Below</h3>
 
 {{#simple-form class="new-team-form" onsubmit="addNewTeam" as |formValues|}}
   {{partial 'admin/teams/form'}}
-
-  {{mdl-button isFloating=true icon='add'}}
+<div class="new-team-form__btns">
+    {{#link-to 'admin.teams'}}{{mdl-button class='new-form-btn' isFloating=true icon='arrow_back'}}{{/link-to}}
+    {{mdl-button class='new-form-btn' isFloating=true icon='add'}}
+</div>
 {{/simple-form}}
+
+
+<style>
+.new-team-form__title {
+  font-family: 'Black Ops One', sans-serif;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.new-team-form__btns {
+  display: flex;
+  justify-content:center;
+  margin: auto;
+}
+
+.new-form-btn {
+  margin: 10px;
+}
+</style>
