@@ -1,1 +1,53 @@
-<img class='team-img' src="/team-logos/jaguars.png" alt="Teams">
+<p class="admin-selection__title">Choose A Category</p>
+<ul class="admin-selections">
+  {{#link-to 'admin.teams'}}
+    <li class="admin-selection__li">
+      <img class='admin-selection_img' src="team-logos/jaguars.png" alt="">
+      <p class="selection-title">Teams</p>
+    </li>
+  {{/link-to}}
+  {{#link-to 'admin.games'}}
+    <li class="admin-selection__li">
+      <img class='admin-selection_img' src="feild.jpg" alt="">
+      <p class="selection-title">Games</p>
+    </li>
+    {{/link-to}}
+</ul>
+
+
+<style>
+  .admin-selection__title {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 50px;
+    font-size: 2em;
+    font-family: 'Black Ops One', sans-serif;
+  }
+
+  .admin-selections {
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .admin-selection_img {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .admin-selection__li {
+    list-style: none;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .selection-title {
+    font-family: 'Black Ops One', sans-serif;
+    padding: 5px;
+    color: #eee;
+    background: #222;
+  }
+
+</style>

@@ -7,7 +7,6 @@ export default Ember.Route.extend({
   beforeModel() {
     return new RSVP.Promise((resolve, reject) => {
       let user = this.get('currentUser.user');
-
       if (!user) {
         this.transitionTo('index');
         return;

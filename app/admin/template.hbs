@@ -1,19 +1,40 @@
-<h1 class="admin-title">Admin Area</h1>
+<div class="admin-nav">
 
-{{#link-to 'admin.teams'}}
-  <p class="admin-link">Teams</p>
-{{/link-to}}
-{{#link-to 'admin.games'}}
-<p class="admin-link">Games</p>
-{{/link-to}}
-{{#link-to 'admin'}}
-  <p class="admin-link">Log out</p>
-{{/link-to}}
+  <ul class="admin-nav__ul">
+    <li class="admin-nav__li">{{#link-to 'index'}}Road Game{{/link-to}}</li>
+    <li class="admin-nav__li">{{#link-to 'admin'}}Admin{{/link-to}}</li>
+    <li class="admin-nav__li">{{#link-to 'admin.teams'}}Teams{{/link-to}}</li>
+    <li class="admin-nav__li">{{#link-to 'admin.games'}}Games{{/link-to}}</li>
+    <li class="admin-nav__li">{{#link-to 'login'}}Logout{{/link-to}}</li>
+  </ul>
+</div>
 {{outlet}}
 
 <style>
-  .team-img {
-    width: 300px;
-    height: 300px;
+
+
+  .admin-nav {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .admin-nav__ul {
+    display: flex;
+    width: 40%;
+    padding-left: 0;
+    list-style: none;
+    justify-content: center;
+
+  }
+
+  .admin-nav__li {
+    font-family: 'Black Ops One', sans-serif;
+    text-decoration: none;
+    padding-left: 10px;
   }
 </style>
