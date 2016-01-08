@@ -1,16 +1,64 @@
+<div class="current-teams">
+  <h2 class="team-list__title">Current Teams</h2>
+  <ul class="admin-team-list">
+    {{#each model as |teamList|}}
+    <li class="admin-team-list__team">
+      {{#link-to 'admin.teams.details' teamList}}{{teamList.city}} {{teamList.name}}{{/link-to}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
+<div class="current-team__btns">
+    {{#link-to 'admin'}}
+      {{mdl-button class="current-team_btn" isFloating=true icon='arrow_back'}}
+    {{/link-to}}
 
-<h2 class="team-list-title">Current Teams</h2>
-<ul class="admin-team-list">
-  {{#each model as |teamList|}}
-  <li class="admin-team-list__team">
-    {{#link-to 'admin.teams.details' teamList}}{{teamList.city}} {{teamList.name}}{{/link-to}}
-  </li>
-  {{/each}}
-</ul>
-{{#link-to 'admin'}}
-  {{mdl-button isFloating=true icon='arrow_back'}}
-{{/link-to}}
+    {{#link-to 'admin.teams.new'}}
+      {{mdl-button class="current-team_btn" isFloating=true icon='add'}}
+    {{/link-to}}
 
-{{#link-to 'admin.teams.new'}}
-  {{mdl-button isFloating=true icon='add'}}
-{{/link-to}}
+  </div>
+
+<style>
+
+  .team-list__title {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .admin-team-list {
+    display: flex;
+    padding-left: 0;
+    padding: 10px;
+    margin-top: 40px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .admin-team-list__team, .admin-team-list__team a {
+    list-style: none;
+    padding: 5px;
+    font-family: 'Black Ops One', sans-serif;
+    color: #eee;
+    text-decoration: none;
+  }
+
+  .current-team__btns {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .current-team_btn {
+    margin: 10px;
+  }
+</style>
