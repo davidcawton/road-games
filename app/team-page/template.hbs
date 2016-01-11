@@ -1,3 +1,106 @@
-<h1>{{model.name}}</h1>
-
+<div class="nav">
+  {{#link-to 'index'}}<img class="nav-logo" src="/team-logos/map.jpg" alt="">{{/link-to}}
+  <ul class="nav-ul">
+    <li class="nav-li">
+      {{#link-to 'teams'}}Teams{{/link-to}}
+    </li>
+    <li class="nav-li">
+      {{#link-to 'login' }}Login{{/link-to}}
+    </li>
+    <li class="nav-li">
+      {{#link-to 'admin'}}Admin{{/link-to}}
+    </li>
+  </ul>
+</div>
+<div class="team-page__header">
+  <div class="team-page__logo-section">
+    <img src="{{model.imgUrl}}" alt="" class="team__logo">
+  </div>
+  <div class="team-page__info">
+    <h1 class="team-page__title">The {{model.city}}{{model.name}}</h1>
+    <div class="team-stats__section">
+      <ul class="team-stats__ul">
+        <li class="team-stats__li">Year Established: {{model.established}}</li>
+        <li class="team-stats__li">Record: {{model.totalRecord}}</li>
+        <li class="team-stats__li">Where Do the {{model.name}} play? {{model.stadiumName}}</li>
+        <li class="team-stats__li">Conference: {{model.conference}}</li>
+        <li class="team-stats__li">Division: {{model.division}}</li>
+      </ul>
+      <ul class="team-stats__ul">
+        <li class="team-stats__li">Team Owner: {{model.owner}}</li>
+        <li class="team-stats__li">General Manager: {{model.generalManager}}</li>
+        <li class="team-stats__li">Coach: {{model.coach}}</li>
+        <li class="team-stats__li">Coach Record: {{model.coachRecord}}</li>
+        <li class="team-stats__li">Star Player: {{model.startPlayer}}</li>
+        <li class="team-stats__li">Fun Fact: {{model.description}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
 {{outlet}}
+
+
+<style>
+.team-page__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 2em 0;
+}
+.team-page__info {
+  width: 70%;
+  border: 1px solid #111;
+}
+.team-page__title {
+  text-align: center;
+}
+
+.team-page__logo-section {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  border: 1px solid #111;
+
+}
+.team__logo {
+  width: 300px;
+  height: 300px;
+}
+
+.team-stats__section {
+  display: flex;
+}
+
+.nav-title {
+  margin-left: 10px;
+}
+
+.nav-logo {
+  width: 80px;
+  height: 50px;
+}
+
+.nav  {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 10px;
+  background: #fff;
+  border-bottom: 1px solid #111;
+  align-items: center;
+}
+
+.nav-logo {
+  padding-left: 30px;
+}
+
+.nav-ul {
+  display: flex;
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.nav-li {
+  list-style: none;
+  margin: 5px;
+}
+</style>

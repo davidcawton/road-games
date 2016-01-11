@@ -1,5 +1,49 @@
-<h2>Schedule</h2>
+<div class="schedule-block">
+  <p class="schedule__title">Schedule</p>
+  {{#each model.games as |game|}}
+    <ul class="schedule__ul">
+      <li class="schedule__li"><img src="{{game.awayTeam.imgUrl}}" alt="" class="schedule-logo"></li>
+      <li class="schedule__li hometeam">{{game.awayTeam.name}}</li>
+      <li class="schedule__li">{{game.awayScore}}</li>
+      <li class="schedule__li">@</li>
+      <li class="schedule__li awayteam">{{game.homeTeam.name}}</li>
+      <li class="schedule__li">{{game.homeScore}}</li>
+      <li class="schedule__li"><img src="{{game.homeTeam.imgUrl}}" alt="" class="schedule-logo"></li>
+    </ul>
+  {{/each}}
+</div>
+<style>
+  .schedule-block {
+    display: flex;
+    align-items: center;
+    border: 1px solid #111;
+    margin: 0 2em;
+    overflow-x: scroll;
+  }
 
-{{#each model.games as |game|}}
-  <li>{{game.awayTeam.name}} @ {{game.homeTeam.name}}</li>
-{{/each}}
+  .schedule__title {
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 24px;
+    margin: 5px;
+    text-align: center;
+  }
+
+  .schedule__ul {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+  }
+
+  .schedule-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .schedule__li {
+    list-style: none;
+    margin: 5px;
+    font-family: 'Black Ops One', sans-serif;
+  }
+</style>

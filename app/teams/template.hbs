@@ -1,32 +1,100 @@
 <div class="nav">
-  <p class="nav-title">Road Game</p>
+  {{#link-to 'index'}}<p class="nav-title">The Road Game</p>{{/link-to}}
   <img class="nav-logo" src="/team-logos/map.jpg" alt="">
   <ul class="nav-ul">
     <li class="nav-li">
       {{#link-to 'login' }}Login{{/link-to}}
     </li>
     <li class="nav-li">
-      {{#link-to 'index'}}Home{{/link-to}}
+      {{#link-to 'admin'}}Admin{{/link-to}}
     </li>
   </ul>
 </div>
 
 <div class="team-list__section">
-  <p class="team-list__title">Select A Team Page</p>
-  <ul class="team-list_ul">
-    {{#each model as |teamList|}}
-    <li class="team-list__team">
-      {{#link-to 'team-page' teamList}}{{teamList.city}} {{teamList.name}}{{/link-to}}
-    </li>
-    {{/each}}
-  </ul>
+  <h2 class="team-list__title">Select Your Team </h2>
+  {{#each model as |teamList|}}
+    <ul class="team-list">
+      <li class="team-list__li">
+        {{#link-to 'team-page' teamList}}<img class="team-list__logo"src="{{teamList.imgUrl}}">{{/link-to}}
+      </li>
+      <li class="team-list__li">
+        {{#link-to 'team-page' teamList}}{{teamList.city}}{{/link-to}}
+      </li>
+      <li class="team-list__li">
+        {{#link-to 'team-page' teamList}}{{teamList.name}}{{/link-to}}
+      </li>
+    </ul>
+  {{/each}}
 </div>
 {{outlet}}
 
 
 <style>
+
+  .team-list__title {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-family: 'Black Ops One', sans-serif;
+    margin: 20px;
+
+  }
+  .team-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .team-list__li, .team-list__li a {
+    list-style: none;
+    margin: 5px;
+    font-family: 'Black Ops One', sans-serif;
+    color: #111;
+    text-decoration: none;
+    font-size: 24px;
+  }
+
+  .team-list__li a:hover {
+    color: #74d090;
+  }
+
+  .team-list__logo {
+    width: 30px;
+    height:30px;
+  }
+
+  /*NAV*/
+  .nav-title {
+    margin-left: 10px;
+  }
+
   .nav-logo {
     width: 80px;
     height: 50px;
+  }
+
+  .nav  {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 10px;
+    background: #fff;
+    border-bottom: 1px solid #111;
+    align-items: center;
+  }
+
+  .nav-logo {
+    padding-left: 10px;
+  }
+
+  .nav-ul {
+    display: flex;
+    padding-left: 0;
+  }
+
+  .nav-li {
+    list-style: none;
+    margin: 5px;
   }
 </style>

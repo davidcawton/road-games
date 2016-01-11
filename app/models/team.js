@@ -23,9 +23,11 @@ export default DS.Model.extend({
   games: DS.hasMany('game', {inverse: null}),
 
   imgUrl: Ember.computed('name', function() {
-    let name = Ember.String.dasherize(this.get('name'));
+    if (this.get('name')) {
+      let name = Ember.String.dasherize(this.get('name'));
 
-    return `/team-logos/${name}.jpg`;
+      return `/team-logos/${name}.jpg`;
+    }
   }),
 
   totalRecord: Ember.computed('totalWins', 'totalLosses', 'totalTies', function() {
