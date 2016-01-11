@@ -1,5 +1,32 @@
+<div class="nav">
+  <p class="nav-title">Road Game</p>
+  <img class="nav-logo" src="/team-logos/map.jpg" alt="">
+  <ul class="nav-ul">
+    <li class="nav-li">
+      {{#link-to 'login' }}Login{{/link-to}}
+    </li>
+    <li class="nav-li">
+      {{#link-to 'index'}}Home{{/link-to}}
+    </li>
+  </ul>
+</div>
+
+<div class="team-list__section">
+  <p class="team-list__title">Select A Team Page</p>
+  <ul class="team-list_ul">
+    {{#each model as |teamList|}}
+    <li class="team-list__team">
+      {{#link-to 'team-page' teamList}}{{teamList.city}} {{teamList.name}}{{/link-to}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
 {{outlet}}
 
-<div class="team-logo-section">
-  <img src="jagsHel.png" alt="Jacksonville Jaguars">
-</div>
+
+<style>
+  .nav-logo {
+    width: 80px;
+    height: 50px;
+  }
+</style>

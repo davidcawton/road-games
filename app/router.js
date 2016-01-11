@@ -36,6 +36,12 @@ Router.map(function() {
   this.route('register');
   this.route('login');
   this.route('authenticator');
+
+  this.route('team-page', {
+    path: '/teams/:team_id',
+  }, function() {
+    this.route('schedule', {path: '/'});
+  });
 });
 
 export default Router;

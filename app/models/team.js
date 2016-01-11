@@ -19,7 +19,14 @@ export default DS.Model.extend({
   description: DS.attr('string'),
   conference: DS.attr('string'),
   division: DS.attr('string'),
-  logo: DS.attr('string'),
+
+  games: DS.hasMany('game', {inverse: null}),
+
+  imgUrl: Ember.computed('name', function() {
+    let name = Ember.String.dasherize(this.get('name'));
+
+    return `/team-logos/${name}.jpg`;
+  }),
 
   totalRecord: Ember.computed('totalWins', 'totalLosses', 'totalTies', function() {
     let totalWins = this.get('totalWins');

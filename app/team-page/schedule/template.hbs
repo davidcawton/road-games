@@ -1,0 +1,5 @@
+<h2>Schedule</h2>
+
+{{#each model.games as |game|}}
+  <li>{{game.awayTeam.name}} @ {{game.homeTeam.name}}</li>
+{{/each}}
