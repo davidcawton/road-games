@@ -1,1 +1,17 @@
+<img class='activities-index__img' src="other-pictures/beach.jpg" alt="">
 <h2 class="activity-index__title"> Current Team Activities</h2>
+<ul class="activity-list">
+  {{#each model as |activityList|}}
+  <li class="activity-list__li">
+    {{activityList.team.name}} {{activityList.name}}
+  </li>
+  {{/each}}
+</ul>
+<div class="activity-list__btns">
+  {{#link-to 'admin'}}
+    {{mdl-button class='activity__btn' isFloating=true icon='arrow_back'}}
+  {{/link-to}}
+  {{#link-to 'admin.activities.new'}}
+    {{mdl-button class='activity__btn' isFloating=true icon='add'}}
+  {{/link-to}}
+</div>

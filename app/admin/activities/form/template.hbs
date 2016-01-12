@@ -1,0 +1,15 @@
+<div class="create-an-activity__form">
+  <ul class="create-an-activity_ul">
+    <li class="create-an-activity__li">{{mdl-textfield class='activity-form__input' label='Activity Category' value=formValues.category}}</li>
+    <li class="create-an-activity__li">{{mdl-textfield class='activity-form__input' label='Activity Name' value=formValues.name}}</li>
+    <li class="create-an-activity__li">{{mdl-textarea class='activity-form__input' label='Description' value=formValues.description}}</li>
+    <li class="create-an-activity__li">
+      <label class='new-activity__label'><strong>{{if model.activity.team.name model.activity.team.name 'Chose a Team'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.activity.team) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+  </ul>
+</div>

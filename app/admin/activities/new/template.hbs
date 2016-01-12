@@ -1,1 +1,8 @@
 <h2 class="admin-new-activity__title">Create A New Activity</h2>
+
+{{#simple-form class='new-activity-form' onsubmit="addNewActivity" as |formValues|}}
+  {{partial 'admin/activities/form'}}
+  <div class="new-activity-form__btns">
+    {{mdl-button class='new-activity__btn' isFloating=true icon='add'}}
+  </div>
+{{/simple-form}}

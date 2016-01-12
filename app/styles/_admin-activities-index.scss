@@ -1,6 +1,6 @@
-//ADMIN GAMES INDEX PAGE
+//ADMIN ACTIVITIES INDEX PAGE
 
-.games-index__img {
+.activities-index__img {
   margin-top: 10px;
   width: 50%;
   height: 30%;
@@ -8,7 +8,7 @@
   justify-content: center;
   margin: auto;
 }
-.admin-game-list__title {
+.activity-index__title {
   font-family: 'Black Ops One', sans-serif;
   display: flex;
   margin: auto;
@@ -17,7 +17,7 @@
   margin-bottom: 10px;
 }
 
-.admin-game-list {
+.activity-list {
   display: flex;
   padding-left: 0;
   padding: 10px;
@@ -30,7 +30,7 @@
   background: rgba(0, 0, 0, 0.9);
 }
 
-.admin-game-list__game, .admin-game-list__game a {
+.activity-list__li {
   list-style: none;
   padding: 5px;
   font-family: 'Black Ops One', sans-serif;
@@ -39,17 +39,17 @@
   font-size: 24px;
 }
 
-.admin-game-list__game a:hover {
+.activity-list__li:hover {
   color: #74d090;
 }
 
-.current-game-btns {
+.activity-list__btns {
   display: flex;
   margin: auto;
   justify-content: center;
   margin: 5px;
 }
 
-.game-btn {
+.activity__btn {
   margin: 10px;
 }

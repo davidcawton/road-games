@@ -2,12 +2,21 @@
 //ADMIN TEAMS INDEX PAGE
 //
 
+
+  .current-teams__img {
+    width: 20%;
+    height: 20%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+
+  }
   .team-list__title {
     font-family: 'Black Ops One', sans-serif;
     display: flex;
     margin: auto;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 20px;
   }
 
