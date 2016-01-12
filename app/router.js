@@ -33,8 +33,12 @@ Router.map(function() {
     });
     this.route('activities', function() {
       this.route('new');
-      this.route('edit');
-      this.route('details');
+      this.route('edit', {
+        path: '/:activity_id/edit',
+      });
+      this.route('details', {
+        path: '/:activity_id',
+      });
     });
   });
 
@@ -46,7 +50,7 @@ Router.map(function() {
     path: '/teams/:team_id',
   }, function() {
     this.route('schedule', {path: '/'});
-    this.route('activities');
+    this.route('activities', {path: '/activities/:category'});
   });
 });
 

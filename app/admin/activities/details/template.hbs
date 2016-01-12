@@ -1,1 +1,10 @@
-{{outlet}}
+<h1 class='activity-detail__title'>Activity For: {{model.team.name}}</h1>
+<ul class="activity-details__ul">
+  <li class="activity-details__li">Category: {{model.category}} </li>
+  <li class="activity-details__li">Name: {{model.name}}</li>
+</ul>
+
+<div class="activity-details_btns">
+    {{#link-to 'admin.activities'}}{{mdl-icon class='game-detail-btn' icon='arrow_back'}} {{/link-to}}
+    {{#link-to 'admin.activities.edit' model.id}}{{mdl-icon class='game-detail-btn' icon='edit'}}{{/link-to}}
+</div>

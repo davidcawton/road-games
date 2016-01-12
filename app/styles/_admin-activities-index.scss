@@ -17,37 +17,43 @@
   margin-bottom: 10px;
 }
 
+.activity-list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  width: 90%;
+}
+
 .activity-list {
   display: flex;
   padding-left: 0;
   padding: 10px;
-  margin-top: 40px;
+  margin: auto;
+  margin-top: 10px;
+  width: 300px;
+  height: 200px;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin: auto;
-  width: 50%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(#0d749a, 0.6);
 }
 
 .activity-list__li {
   list-style: none;
   padding: 5px;
   font-family: 'Black Ops One', sans-serif;
-  color: #eee;
+  color: #ddd;
   text-decoration: none;
   font-size: 24px;
-}
-
-.activity-list__li:hover {
-  color: #74d090;
 }
 
 .activity-list__btns {
   display: flex;
   margin: auto;
-  justify-content: center;
-  margin: 5px;
+  justify-content: space-between;
+  margin: 50px 25px;
+
 }
 
 .activity__btn {

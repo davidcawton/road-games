@@ -1,1 +1,9 @@
 <h2 class="admin-new-activity__title">Edit A Team Activity</h2>
+
+{{#simple-form class='new-activity-form' startingValues=model.activity onsubmit="saveActivity" as |formValues|}}
+  {{partial 'admin/activities/form'}}
+  <div class="new-activity-form__btns">
+    {{mdl-button class='new-activity__btn' isFloating=true icon='add'}}
+    {{mdl-button class='new-activity__btn' action='removeActivity' isFloating=true icon='delete'}}
+  </div>
+{{/simple-form}}
