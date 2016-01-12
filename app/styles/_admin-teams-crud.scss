@@ -1,0 +1,68 @@
+// ADMIN TEAMS CRUD
+//
+//
+//
+// ADMIN TEAMS NEW / EDIT PAGES
+//
+
+.new-team-form__title, .edit-team-form__title {
+  font-family: 'Black Ops One', sans-serif;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.new-team-form__btns, .edit-team-form__btns {
+  display: flex;
+  justify-content:center;
+  margin: auto;
+}
+
+.new-form-btn, .edit-form-btn {
+  margin: 10px;
+}
+
+//
+//ADMIN TEAM DETAILS PAGE
+//
+.team-detail__title {
+  font-family: 'Black Ops One', sans-serif;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.team-details {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  font-family: 'Black Ops One', sans-serif;
+}
+
+.team-details__li {
+  list-style: square;
+}
+
+.new-team-form__btns {
+  display: flex;
+  justify-content:center;
+  margin: auto;
+}
+
+.new-form-btn {
+  margin: 10px;
+}
+
+.team-details_btns {
+  display: flex;
+  justify-content:center;
+  margin: auto;
+}
+
+.detail-btn {
+    margin: 10px;
+}

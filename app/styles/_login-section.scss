@@ -1,0 +1,32 @@
+// LOGIN
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  max-width: 50%;
+}
+
+.login-form__graph {
+  text-align: center;
+}
+
+
+.login-title  {
+  font-family: 'Black Ops One', sans-serif;
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  border: 5px dotted #000;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.login-hero {
+  display: flex;
+  width: 40%;
+  margin: auto;
+  padding: 20px;
+}

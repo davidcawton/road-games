@@ -1,1 +1,57 @@
 @import 'material-design-lite';
+
+// Index Page //
+
+.index-links {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+  .index-title  {
+    font-family: 'Black Ops One', sans-serif;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    border: 5px dotted #000;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .index-hero {
+    display: flex;
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+  }
+
+
+  // Individual Pages
+
+  // REGISTRATION / LOGIN
+  @import '_login-section';
+  @import '_register-section';
+
+  //CLIENT-SIDE
+  @import '_client-side-nav';
+  @import '_team-selection-section';
+  @import '_team-page';
+  @import '_team-page-schedule';
+
+
+//ADMIN-SIDE
+@import '_admin-nav';
+@import '_admin-index';
+
+    //Admin Game CRUD
+@import '_admin-games-index';
+@import '_admin-games-crud';
+@import '_admin-create-game-partial';
+
+    //Admin Team CRUD
+@import '_admin-teams-index';
+@import '_admin-teams-crud';
+@import '_admin-create-team-partial';

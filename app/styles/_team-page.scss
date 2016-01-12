@@ -1,0 +1,34 @@
+// TEAM PAGE
+
+// HEADER
+
+.team-page__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 2em 0;
+}
+.team-page__info {
+  width: 70%;
+  border: 1px solid #111;
+}
+.team-page__title {
+  text-align: center;
+}
+
+.team-page__logo-section {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #111;
+
+}
+.team__logo {
+  width: 90%;
+  height: 90%;
+
+}
+
+.team-stats__section {
+  display: flex;
+}
