@@ -31,6 +31,11 @@ Router.map(function() {
         path: '/:game_id',
       });
     });
+    this.route('activities', function() {
+      this.route('new');
+      this.route('edit');
+      this.route('details');
+    });
   });
 
   this.route('register');
@@ -41,6 +46,7 @@ Router.map(function() {
     path: '/teams/:team_id',
   }, function() {
     this.route('schedule', {path: '/'});
+    this.route('activities');
   });
 });
 

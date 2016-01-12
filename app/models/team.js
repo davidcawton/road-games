@@ -21,6 +21,7 @@ export default DS.Model.extend({
   division: DS.attr('string'),
 
   games: DS.hasMany('game', {inverse: null}),
+  activities: DS.hasMany('activity', {inverse: null}),
 
   imgUrl: Ember.computed('name', function() {
     if (this.get('name')) {
