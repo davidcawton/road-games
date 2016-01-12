@@ -11,7 +11,8 @@ export default Ember.Route.extend({
 
   actions: {
     addNewActivity(formData) {
-      let newActivity = this.store.createRecord('activity');
+      let newActivity = this.modelFor(this.routeName).activity;
+
       newActivity.setProperties(formData);
       newActivity.save().then(() => {
         this.transitionTo('admin.activities');
