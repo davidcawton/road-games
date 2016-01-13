@@ -2,57 +2,132 @@
 //ADMIN TEAMS INDEX PAGE
 //
 
+.admin-teams {
+  position: relative;
+  margin: 2.5em;
+}
+.admin-team__title {
+  font-family: 'Black Ops One', sans-serif;
+  display: flex;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
 
-  .current-teams__img {
-    width: 20%;
-    height: 20%;
-    display: flex;
-    margin: auto;
-    justify-content: center;
 
-  }
-  .team-list__title {
-    font-family: 'Black Ops One', sans-serif;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
+//CARDS
+.admin-team__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  justify-content: center;
+  margin: 0 5em;
+  padding-left: 0;
+}
 
-  .admin-team-list {
-    display: flex;
-    padding-left: 0;
-    padding: 10px;
-    margin-top: 40px;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    width: 50%;
-    background: rgba(0, 0, 0, 0.9);
-  }
+.admin-team__card {
+  display: flex;
+  position: relative;
+  margin: 10px 5px;
+  border-bottom: 1px solid #111;
+}
 
-  .admin-team-list__team, .admin-team-list__team a {
-    list-style: none;
-    padding: 5px;
-    font-family: 'Black Ops One', sans-serif;
-    color: #eee;
-    text-decoration: none;
-    font-size: 24px;
-  }
+.team-card__logo {
+  width: 300px;
+  height: 300px;
+  opacity: .70;
+  padding-left: 0;
+}
 
-  .admin-team-list__team a:hover {
-    color: #74d090;
-  }
+.team-card__logo-cover{
+  position: absolute;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #1b66d6;
+  opacity: .05;
+}
 
-  .current-team__btns {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    margin: 5px;
-  }
+.team-card__title, .team-card__title a {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 3em;
+  opacity: 0;
+}
 
-  .current-team_btn {
-    margin: 10px;
-  }
+.team-city {
+  top: 35%;
+}
+
+.team-name {
+  top: 50%;
+}
+
+@keyframes citySlide {
+  from {top: 38%}
+  to {top: 35%}
+}
+
+@keyframes nameSlide {
+  from {top: 53%}
+  to {top: 50%}
+}
+
+.admin-team__card:hover .team-city {
+  opacity: .90;
+  animation-name: citySlide;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+}
+
+.admin-team__card:hover .team-name {
+  opacity: .90;
+  animation-name: nameSlide;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+}
+
+.admin-team__card:hover .team-card__logo-cover {
+  opacity: .70
+}
+
+.admin-team__nav {
+  display: flex;
+  margin-top: 5px;
+  height: 50px;
+  width: 40%;
+  position: fixed;
+  justify-content: flex-start;
+  bottom: 50px;
+  list-style: none;
+  padding-left: 10px;
+
+}
+
+.admin-team_nav-li {
+  font-size: 10px;
+  font-family: 'Black Ops One', sans-serif;
+  text-decoration: none;
+  color: #111;
+  padding-left: 10px;
+}
+
+
+.new-team__title, .new-team__title a {
+  opacity: .5;
+  color: #111;
+  padding: 5px;
+}
+
+.admin-team__nav:hover .new-team__title {
+  opacity: .90;
+}

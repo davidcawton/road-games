@@ -1,12 +1,36 @@
 <div class="admin-nav">
 
   <ul class="admin-nav__ul">
-    <li class="admin-nav__li">{{#link-to 'index'}}Road Game{{/link-to}}</li>
-    <li class="admin-nav__li">{{#link-to 'admin'}}Admin{{/link-to}}</li>
-    <li class="admin-nav__li">{{#link-to 'admin.teams'}}Teams{{/link-to}}</li>
-    <li class="admin-nav__li">{{#link-to 'admin.games'}}Games{{/link-to}}</li>
-    <li class="admin-nav__li">{{#link-to 'admin.activities'}}Activities{{/link-to}}</li>
-    <li class="admin-nav__li">{{#link-to 'login'}}Logout{{/link-to}}</li>
+    <li class="admin-nav__li">
+      {{#link-to 'index'}}
+        {{#mdl-button icon="home"}}{{/mdl-button}}
+        <span class="nav-title">Home</span>
+      {{/link-to}}
+    </li>
+    <li class="admin-nav__li">
+        {{#link-to 'admin'}}
+          {{#mdl-button icon="verified_user"}}{{/mdl-button}}
+          <span class="nav-title">Admin</span>
+        {{/link-to}}
+    </li>
+    <li class="admin-nav__li">
+        {{#link-to 'admin.teams'}}
+          {{#mdl-button icon="people"}}{{/mdl-button}}
+          <span class="nav-title">Teams</span>
+        {{/link-to}}
+    </li>
+    <li class="admin-nav__li">
+        {{#link-to 'admin.games'}}
+          {{#mdl-button icon="account_balance"}}{{/mdl-button}}
+          <span class="nav-title">Games</span>
+        {{/link-to}}
+    </li>
+    <li class="admin-nav__li">
+        {{#link-to 'admin.activities'}}
+          {{#mdl-button icon="note_add"}}{{/mdl-button}}
+          <span class="nav-title">Activity</span>
+        {{/link-to}}
+    </li>
   </ul>
 </div>
 {{outlet}}

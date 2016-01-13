@@ -1,20 +1,23 @@
-<div class="current-teams">
-  <img class='current-teams__img' src="team-logos/jaguars.jpg" alt="">
-  <h2 class="team-list__title">Current Teams</h2>
-  <ul class="admin-team-list">
+<div class="admin-teams">
+  <h2 class="admin-team__title">Teams</h2>
+  <ul class="admin-team__list">
     {{#each model as |teamList|}}
-    <li class="admin-team-list__team">
-      {{#link-to 'admin.teams.details' teamList}}{{teamList.city}} {{teamList.name}}{{/link-to}}
-    </li>
+      {{#link-to 'admin.teams.details' teamList}}
+      <li class="admin-team__card">
+        <img src="{{teamList.imgUrl}}" alt="" class="team-card__logo">
+        <div class="team-card__logo-cover"> </div>
+        <p class='team-card__title team-city'>{{teamList.city}}</p><br>
+        <p class='team-card__title team-name'>{{teamList.name}}</p>
+      </li>
+    {{/link-to}}
     {{/each}}
   </ul>
 </div>
-<div class="current-team__btns">
-    {{#link-to 'admin'}}
-      {{mdl-button class="current-team_btn" isFloating=true icon='arrow_back'}}
-    {{/link-to}}
 
-    {{#link-to 'admin.teams.new'}}
-      {{mdl-button class="current-team_btn" isFloating=true icon='add'}}
-    {{/link-to}}
-  </div>
+<ul class="admin-team__nav">
+  <li class='admin-team_nav-li'>
+  {{#link-to 'admin.teams'}}
+    {{#mdl-button class='new-team__btn' icon="add"}}{{/mdl-button}}<span class="new-team__title">New</span>
+  {{/link-to}}
+  </li>
+</ul>
