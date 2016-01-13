@@ -1,61 +1,121 @@
 //ADMIN ACTIVITIES INDEX PAGE
-
-.activities-index__img {
-  margin-top: 10px;
-  width: 50%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  margin: auto;
+.activity-list {
+  position: relative;
+  margin: 2.5em;
 }
-.activity-index__title {
+
+.admin-activities__title {
   font-family: 'Black Ops One', sans-serif;
   display: flex;
-  margin: auto;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  margin-top: 20px;
+  align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: auto;
 }
 
 .activity-list__cards {
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
   justify-content: center;
-  width: 90%;
+  margin: auto;
 }
 
-.activity-list {
+.admin-activity__ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
   padding-left: 0;
-  padding: 10px;
-  margin: auto;
-  margin-top: 10px;
-  width: 300px;
-  height: 200px;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background: rgba(#0d749a, 0.6);
 }
 
-.activity-list__li {
-  list-style: none;
-  padding: 5px;
-  font-family: 'Black Ops One', sans-serif;
-  color: #ddd;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.activity-list__btns {
+.activity-list__card {
   display: flex;
-  margin: auto;
-  justify-content: space-between;
-  margin: 50px 25px;
-
+  position: relative;
+  margin: 10px 5px;
 }
 
-.activity__btn {
-  margin: 10px;
+.activity-card__img {
+  width: 300px;
+  height: 300px;
+}
+
+.activity-card__img-cover {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  background: #1b66d6;
+  opacity: .70;
+}
+
+.activity-card__title, .activity-card__title a {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  font-family: 'Black Ops One', sans-serif;
+  opacity: .70;
+}
+
+.activity-city {
+  top: 25%;
+  font-size: 2em;
+  color: #fff;
+}
+
+.activity-team {
+  top: 35%;
+  font-size: 2em;
+  color: #fff;
+}
+
+.activity-category {
+  top: 55%;
+  font-size: 1.5em;
+  color: #ccbe3c;
+}
+.activity-name {
+  top: 65%;
+  font-size: 1.5em;
+  color: #ccbe3c;
+}
+
+.activity-list__card:hover .activity-card__title {
+  opacity: 1;
+}
+
+// BUTTON
+
+.admin-activity__nav {
+  display: flex;
+  margin-top: 5px;
+  height: 50px;
+  width: 40%;
+  position: fixed;
+  justify-content: flex-start;
+  bottom: 35%;
+  list-style: none;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.admin-activity_nav-li {
+  font-size: 10px;
+  font-family: 'Black Ops One', sans-serif;
+  color: #111;
+  padding-left: 10px;
+}
+
+.new-activity__btn-title, .new-activity__btn-title a {
+  opacity: .5;
+  color: #111;
+  padding: 5px;
+}
+
+.admin-activity__nav:hover .new-activity__btn-title {
+  opacity: .90;
 }

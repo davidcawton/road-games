@@ -1,10 +1,29 @@
-<h1 class='activity-detail__title'>Activity For: {{model.team.name}}</h1>
-<ul class="activity-details__ul">
-  <li class="activity-details__li">Category: {{model.category}} </li>
-  <li class="activity-details__li">Name: {{model.name}}</li>
-</ul>
+<h2 class='activity-detail__title'>{{model.team.name}}</h2>
+<h2 class='activity-detail__title activity-sub'>{{model.category}}</h2>
 
-<div class="activity-details_btns">
-    {{#link-to 'admin.activities'}}{{mdl-icon class='game-detail-btn' icon='arrow_back'}} {{/link-to}}
-    {{#link-to 'admin.activities.edit' model.id}}{{mdl-icon class='game-detail-btn' icon='edit'}}{{/link-to}}
+<div class="activity-details">
+  <ul class="activity-details__ul">
+    <li class="activity-details__li activity-cat">Category:</li>
+    <li class="activity-details__li activity-cat">What:</li>
+    <li class="activity-details__li activity-cat">Description:</li>
+  </ul>
+  <ul class="activity-details__ul">
+    <li class="activity-details__li activity-answer">{{model.category}} </li>
+    <li class="activity-details__li activity-answer">{{model.name}}</li>
+    <li class="activity-details__li activity-answer">{{model.description}}</li>
+  </ul>
 </div>
+
+
+<ul class="admin-activity-details__nav">
+  <li class='activities-details__nav-li'>
+  {{#link-to 'admin.activities.edit' model}}
+    {{#mdl-button class='ad__btn' icon="edit"}}{{/mdl-button}}<span class="ad__title">Edit</span>
+  {{/link-to}}
+  </li>
+  <li class='activities-details__nav-li'>
+  {{#link-to 'admin.activities'}}
+    {{#mdl-button class='ad__btn' icon="arrow_back"}}{{/mdl-button}}<span class="ad__title">Back</span>
+  {{/link-to}}
+  </li>
+</ul>

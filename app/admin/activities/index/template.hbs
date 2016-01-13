@@ -1,25 +1,28 @@
-<img class='activities-index__img' src="/beach.jpg" alt="">
-<h2 class="activity-index__title"> Current Team Activities</h2>
-<div class="activity-list__cards">
+<div class="activity-list">
+  <h2 class="admin-activities__title"> Activities </h2>
+  <div class="activity-list__cards">
   {{#each model as |activityList|}}
-    <ul class="activity-list">
-      <li class="activity-list__li">Team: {{activityList.team.name}}</li>
-      <li class="activity-list__li">Type: {{activityList.category}}</li>
-      <li class="activity-list__li">Name: {{activityList.name}}</li>
-      <li class="activity-list__li">
-        {{#link-to 'admin.activities.details' activityList}}
-          {{mdl-button class='activity-edit__btn' isFloating=true icon='edit'}}
-        {{/link-to}}
+  {{#link-to 'admin.activities.details' activityList}}
+    <ul class="admin-activity__ul">
+      <li class="activity-list__card">
+        <img class="activity-card__img" src="{{activityList.pictureUrl}}" alt="">
+        <div class="activity-card__img-cover"></div>
+        <p class="activity-card__title activity-city">{{activityList.team.city}} </p>
+        <p class="activity-card__title activity-team">{{activityList.team.name}}: </p>
+        <p class="activity-card__title activity-category">{{activityList.category}}: </p>
+        <p class="activity-card__title activity-name">{{activityList.name}} </p>
       </li>
     </ul>
-  {{/each}}
+    {{/link-to}}
+    {{/each}}
+  </div>
 </div>
 
-<div class="activity-list__btns">
-  {{#link-to 'admin'}}
-    {{mdl-button class='activity__btn' isFloating=true icon='arrow_back'}}
-  {{/link-to}}
+
+<ul class="admin-activity__nav">
+  <li class='admin-activity_nav-li'>
   {{#link-to 'admin.activities.new'}}
-    {{mdl-button class='activity__btn' isFloating=true icon='add'}}
+    {{#mdl-button class='new-activity__btn' icon="add"}}{{/mdl-button}}<span class="new-activity__btn-title">New</span>
   {{/link-to}}
-</div>
+  </li>
+</ul>

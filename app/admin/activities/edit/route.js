@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       let activity = this.modelFor(this.routeName).activity;
       activity.setProperties(formData);
       activity.save().then(() => {
-        this.transitionTo('admin.activities');
+        this.transitionTo('admin.activities', activity);
       });
     },
 
