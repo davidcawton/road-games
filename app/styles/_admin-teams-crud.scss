@@ -1,9 +1,6 @@
 // ADMIN TEAMS CRUD
-//
-//
-//
+
 // ADMIN TEAMS NEW / EDIT PAGES
-//
 
 .new-team-form__title, .edit-team-form__title {
   font-family: 'Black Ops One', sans-serif;
@@ -14,55 +11,95 @@
   margin-bottom: 20px;
 }
 
-.new-team-form__btns, .edit-team-form__btns {
-  display: flex;
-  justify-content:center;
-  margin: auto;
-}
-
-.new-form-btn, .edit-form-btn {
-  margin: 10px;
-}
-
-//
 //ADMIN TEAM DETAILS PAGE
-//
+
+
+.team-detail__title-section  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  vertical-align:  center;
+  padding-bottom: 20px;
+
+}
+
 .team-detail__title {
   font-family: 'Black Ops One', sans-serif;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  text-align: center;
+  width: 400px;
+  height: 150px;
+}
+
+.team-details__img {
+  width: 150px;
+  height: 150px;
 }
 
 .team-details {
   display: flex;
   margin: auto;
   justify-content: center;
+  background: #faf9fe;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-details__ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 2em;
+}
+
+.team-cat_li {
+  font-weight: bold;
+}
+
+.team-details_answers {
+  text-align: left;
+  padding-left: 20px;
+}
+
+//BUTTONS NAV
+
+.admin-team-details__nav, .admin-team-form__nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  height: 50px;
+  width: 40%;
+  position: fixed;
+  justify-content: flex-start;
+  bottom: 35%;
+  list-style: none;
+  padding-left: 10px;
+
+}
+
+.team-details__nav-li,  .team-details__nav-li a, .team-form__nav-li, .team-form__nav-li a  {
+  font-size: 10px;
   font-family: 'Black Ops One', sans-serif;
+  text-decoration: none;
+  color: #111;
+  padding-left: 10px;
 }
 
-.team-details__li {
-  list-style: square;
+.team-form__nav-li a {
+  padding-left:0;
 }
 
-.new-team-form__btns {
-  display: flex;
-  justify-content:center;
-  margin: auto;
+.td__title, .td__title a, .form__btn-title, .form__btn-title, .form__btn-title a{
+  color: #111;
+  text-decoration: none;
+  opacity: .3;
 }
 
-.new-form-btn {
-  margin: 10px;
+.team-details__nav-li:hover .form__btn-title {
+  opacity: .9;
 }
 
-.team-details_btns {
-  display: flex;
-  justify-content:center;
-  margin: auto;
-}
-
-.detail-btn {
-    margin: 10px;
+.team-new__nav-li:hover .form__btn-title {
+  opacity: .9;
 }

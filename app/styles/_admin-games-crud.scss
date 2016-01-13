@@ -3,20 +3,11 @@
   .new-game-form__title, .edit-game-form__title {
     font-family: 'Black Ops One', sans-serif;
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 20px;
-  }
-
-  .new-game-form__btns, .edit-game-form__btns {
-    display: flex;
-    justify-content:center;
-    margin: auto;
-  }
-
-  .new-game-btn, .edit-game-btn  {
-    margin: 10px;
   }
 
 //
@@ -24,26 +15,72 @@
 //
 
 .game-detail__title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
   font-family: 'Black Ops One', sans-serif;
+  text-align: center;
+  width: 400px;
+  height: 150px;
+}
+
+.game-details {
   display: flex;
   margin: auto;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  background: #faf9fe;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .game-details__ul {
-  margin: auto;
-  justify-content: center;
-  font-family: 'Black Ops One', sans-serif;
+  list-style: none;
+  padding-left: 0;
+  margin: 2em;
 }
 
-.game-details_btns {
+.game-cat_li {
+  font-weight: bold;
+}
+
+.game-details_answers {
+  text-align: left;
+  padding-left: 20px;
+}
+
+
+//BUTTONS NAV
+
+.admin-game-details__nav, .admin-game-form__nav {
   display: flex;
-  justify-content:center;
-  margin: auto;
+  flex-direction: column;
+  margin-top: 5px;
+  height: 50px;
+  width: 40%;
+  position: fixed;
+  justify-content: flex-start;
+  bottom: 35%;
+  list-style: none;
+  padding-left: 10px;
+
 }
 
-.game-detail-btn {
-    margin: 10px;
+ .game-details__nav-li,  .game-details__nav-li a, .game-form__nav-li, .game-form__nav-li a  {
+  font-size: 10px;
+  font-family: 'Black Ops One', sans-serif;
+  text-decoration: none;
+  color: #111;
+  padding-left: 10px;
+}
+
+.game-details__nav-li, .game-form__nav-li a {
+  padding-left:0;
+  text-decoration: none;
+}
+
+ .gd__title, .gd__title a, .form__btn-title, .form__btn-title a{
+  color: #111;
+  text-decoration: none;
+  opacity: .3;
 }

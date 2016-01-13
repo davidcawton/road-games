@@ -19,7 +19,7 @@ export default Ember.Route.extend({
     },
 
     removeGame() {
-      let game = this.modelFor(this.routeName);
+      let game = this.modelFor(this.routeName).game;
       game.destroyRecord().then(() => {
         this.transitionTo('admin.games');
       });

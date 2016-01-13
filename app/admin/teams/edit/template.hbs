@@ -4,8 +4,13 @@
 
 {{#simple-form class="new-team-form" startingValues=model onsubmit="saveTeam" as |formValues|}}
   {{partial 'admin/teams/form'}}
-<div class="edit-team-form__btns">
-    {{mdl-button class='edit-form-btn' isFloating=true icon='check_circle'}}
-    {{mdl-button class='edit-form-btn' action='removeTeam' isFloating=true icon='delete'}}
-</div>
+
+  <ul class="admin-team-form__nav">
+    <li class='team-form__nav-li'>
+      {{#mdl-button class='form-team-btn' icon='save'}}{{/mdl-button}}<span class="form__btn-title">Save</span>
+    </li>
+    <li class='team-form__nav-li'>
+      {{#link-to 'admin.teams'}}{{#mdl-button action='removeTeam' class='form-team-btn' icon='delete'}}{{/mdl-button}}<span class="form__btn-title">Trash</span>{{/link-to}}
+    </li>
+  </ul>
 {{/simple-form}}

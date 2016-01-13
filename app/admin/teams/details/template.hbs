@@ -1,24 +1,43 @@
-<h1 class='team-detail__title'>{{model.city}} {{model.name}}</h1>
+<div class="team-detail__title-section">
+  <h1 class='team-detail__title'>{{model.city}} {{model.name}}</h1>
+  <img src="{{model.imgUrl}}" alt="" class="team-details__img">
+</div>
 <div class="team-details">
-  <img src="{{model.imgUrl}}" alt="" class="admin-logo">
-  <ul class="team-details__ul">
-    <li class="team-details__li">Year Established: {{model.established}}</li>
-    <li class="team-details__li">Record: {{model.totalRecord}}</li>
-    <li class="team-details__li">Where Do the {{model.name}} play? {{model.stadiumName}}</li>
-    <li class="team-details__li">Conference: {{model.conference}}</li>
-    <li class="team-details__li">Division: {{model.division}}</li>
+  <ul class="team-details__ul team-detail_cat">
+    <li class="team-details__li team-cat_li">Year Established:</li>
+    <li class="team-details__li team-cat_li">Record:</li>
+    <li class="team-details__li team-cat_li">Where Do the {{model.name}} play?</li>
+    <li class="team-details__li team-cat_li">Conference:</li>
+    <li class="team-details__li team-cat_li">Division:</li>
+    <li class="team-details__li team-cat_li">Team Owner:</li>
+    <li class="team-details__li team-cat_li">General Manager:</li>
+    <li class="team-details__li team-cat_li">Coach:</li>
+    <li class="team-details__li team-cat_li">Coach Record:</li>
+    <li class="team-details__li team-cat_li">Star Player:</li>
   </ul>
-  <ul class="team-details__ul">
-    <li class="team-details__li">Team Owner: {{model.owner}}</li>
-    <li class="team-details__li">General Manager: {{model.generalManager}}</li>
-    <li class="team-details__li">Coach: {{model.coach}}</li>
-    <li class="team-details__li">Coach Record: {{model.coachRecord}}</li>
-    <li class="team-details__li">Star Player: {{model.startPlayer}}</li>
-    <li class="team-details__li">Fun Fact: {{model.description}}</li>
+  <ul class="team-details__ul team-details_answers">
+    <li class="team-details__li"> {{model.established}}</li>
+    <li class="team-details__li">{{model.totalRecord}}</li>
+    <li class="team-details__li">{{model.stadiumName}}</li>
+    <li class="team-details__li">{{model.conference}}</li>
+    <li class="team-details__li">{{model.division}}</li>
+    <li class="team-details__li">{{model.owner}}</li>
+    <li class="team-details__li">{{model.generalManager}}</li>
+    <li class="team-details__li">{{model.coach}}</li>
+    <li class="team-details__li">{{model.coachRecord}}</li>
+    <li class="team-details__li">{{model.startPlayer}}</li>
   </ul>
 </div>
 
-<div class="team-details_btns">
-  {{#link-to 'admin.teams'}}{{mdl-icon class='detail-btn' icon='arrow_back'}} {{/link-to}}
-  {{#link-to 'admin.teams.edit' model}}{{mdl-icon class='detail-btn' icon='edit'}}{{/link-to}}
-</div>
+<ul class="admin-team-details__nav">
+  <li class='team-details__nav-li'>
+  {{#link-to 'admin.teams.edit' model}}
+    {{#mdl-button class='td__btn' icon="edit"}}{{/mdl-button}}<span class="td__title">Edit</span>
+  {{/link-to}}
+  </li>
+  <li class='team-details__nav-li'>
+  {{#link-to 'admin.teams'}}
+    {{#mdl-button class='td__btn' icon="arrow_back"}}{{/mdl-button}}<span class="td__title">Back</span>
+  {{/link-to}}
+  </li>
+</ul>
