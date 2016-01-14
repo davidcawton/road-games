@@ -1,29 +1,31 @@
-<h1 class="register-form__title">Road Game</h1>
-<img class="register-form__hero" src="/team-logos/roadgamemap.jpg" alt="">
-
-<div class="register-form">
-  {{#simple-form onsubmit="registerUser" as |user|}}
-  <p class="register-form__graph">
-    {{mdl-textfield class="register-form__input"value=user.firstName label="First Name"}}
-    {{mdl-textfield class="register-form__input"value=user.lastName label="Last Name"}}
-  </p>
-  <p class="register-form__graph">
-    {{mdl-textfield class="register-form__input"value=user.email label="Email"}}
-    {{mdl-textfield class="register-form__input"value=user.favoriteTeam label="Favorite Team"}}
-  </p>
-  <p class="register-form__graph">
-    {{mdl-textfield class="register-form__input"type="password" value=user.password label="Password"}}
-    {{mdl-textfield class="register-form__input"type="password" value=user.passowrd_confirmation label="Confirm Password"}}
-  </p>
-  <ul class="register-form__btns">
-    <li class="register-form__btn">
-      {{#mdl-button}}Submit{{/mdl-button}}
-    </li>
-    <li class="register-form__btn">
-      {{#link-to 'login' class="login-text-link"}}
-        Already Have An Account?
-      {{/link-to}}
-    </li>
-  </ul>
-    {{/simple-form}}
+<div class="register">
+  <div class="register-side">
+    <h1 class="register-title">Sign Up!</h1>
+  </div>
+  <div class="register-form">
+    {{#simple-form onsubmit="registerUser" as |user|}}
+    <p class="register-form__graph">
+      {{mdl-textfield class="register-form__input"value=user.firstName label="First Name"}}
+      {{mdl-textfield class="register-form__input"value=user.lastName label="Last Name"}}
+    </p>
+    <p class="register-form__graph">
+      {{mdl-textfield class="register-form__input"value=user.email label="Email"}}
+      {{mdl-textfield class="register-form__input"value=user.favoriteTeam label="Favorite Team"}}
+    </p>
+    <p class="register-form__graph">
+      {{mdl-textfield class="register-form__input"type="password" value=user.password label="Password"}}
+      {{mdl-textfield class="register-form__input"type="password" value=user.passowrd_confirmation label="Confirm Password"}}
+    </p>
+    <ul class="register-form__btns">
+      <li class="register-form__btn">
+        {{#mdl-button}}Submit{{/mdl-button}}
+      </li>
+      <li class="register-form__btn">
+        {{#link-to 'login' class="login-text-link"}}
+          Already Have An Account?
+        {{/link-to}}
+      </li>
+    </ul>
+      {{/simple-form}}
+  </div>
 </div>

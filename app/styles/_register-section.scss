@@ -1,36 +1,20 @@
 // USER REGISTRATION SECTION
 
-.register-form__btns {
+.register {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 0;
 }
 
-.register-form__btn {
-  list-style: none;
-  margin: 5px;
-}
-
-.grey-text {
-  color: #888;
-}
-.register-form__title  {
-  font-family: 'Black Ops One', sans-serif;
-  display: flex;
-  width: 50%;
-  margin: auto;
-  justify-content: center;
-  border: 5px dotted #000;
-  margin-top: 50px;
+.register-side {
   text-align: center;
+  padding: 10px;
 }
 
-.register-form__hero {
-  display: flex;
-  width: 40%;
-  margin: auto;
-  padding: 20px;
+.register-title {
+  font-family: 'Black Ops One', sans-serif;
+  color: #1b66d6;
+
 }
 
 .register-form__graph {
@@ -42,5 +26,17 @@
 }
 
 .register-form__input {
+  margin: 5px;
+}
+
+.register-form__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.register-form__btn {
+  list-style: none;
   margin: 5px;
 }

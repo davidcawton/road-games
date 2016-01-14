@@ -1,17 +1,14 @@
 {{outlet}}
 
-<h1 class="login-title">Road Game</h1>
-<img class="login-hero" src="team-logos/map.jpg" alt="">
 
-<div class="login-form">
+<div class="login">
   {{#simple-form onsubmit="loginUser" as |login|}}
-    <p class="login-form__graph">{{mdl-textfield label="Email" value=login.email}}</p>
-    <p class="login-form__graph">{{mdl-textfield label="Password" type="password" value=login.password}}</p>
-    <p class="login-form__graph">
+  <ul class="login-form">
+    <li class="login-form__input">{{mdl-textfield label="Email" value=login.email}}</li>
+    <li class="login-form__input">{{mdl-textfield label="Password" type="password" value=login.password}}</li>
+    <li class="login-form__input">
       {{#mdl-button}}Login{{/mdl-button}}
-      {{#link-to 'register'}}
-        {{#mdl-button}}Register{{/mdl-button}}
-      {{/link-to}}
-    </p>
+    </li>
+  </ul>
   {{/simple-form}}
 </div>

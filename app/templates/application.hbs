@@ -1,1 +1,29 @@
+
+<div class="index">
+  <div class="index-hero__left">
+    <h2 class="index-subtile">PUT ON FOR YOUR CITY, IN ANOTHER.</h2>
+    <p class="index-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <div class="index-hero-links">
+      <ul class="index-hero-links__ul">
+        <li>{{#link-to 'teams'}}{{#mdl-button icon='apps'}}{{/mdl-button}}{{/link-to}}</li>
+        <li>{{#link-to 'teams'}}Teams{{/link-to}}</li>
+      </ul>
+      <ul class="index-hero-links__ul">
+        <li>{{#link-to 'register'}}{{#mdl-button icon="face"}}{{/mdl-button}}{{/link-to}}</li>
+        <li>{{#link-to 'teams'}}Sign Up{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="index-hero__right">
+    {{#link-to 'login'}}
+    <ul class="index-hero__admin">
+      <li class="hero-link_li"><p class="hero_admin-link">Admin</p></li>
+      <li class="hero-link_li">{{#mdl-button class="hero_admin-link" icon="fingerprint"}}{{/mdl-button}}</li>
+   </ul>
+   {{/link-to}}
+    <h1 class="index-title">Road Warrior </h1>
+  </div>
+</div>
+
   {{outlet}}

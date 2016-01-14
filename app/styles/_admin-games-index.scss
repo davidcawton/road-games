@@ -22,9 +22,10 @@
 
 .admin-game-list {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
+  margin: 0 5em;
   padding: 10px;
 }
 
@@ -115,7 +116,7 @@
   width: 40%;
   position: fixed;
   justify-content: flex-start;
-  bottom: 35%;
+  bottom: 5%;
   list-style: none;
   padding-left: 10px;
 

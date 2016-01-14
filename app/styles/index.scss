@@ -1,0 +1,65 @@
+.index {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 4em;;
+  height: 300px;
+  background: url('../road.jpg')
+  no-repeat center fixed;
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.index-hero__left {
+  width: 40%;
+  background: rgba(#e9ece5, 0.8);
+}
+
+.index-hero__right {
+  position: relative;
+  background: rgba(#1b66d6, 0.9);
+  width: 60%;
+  justify-content: center;
+}
+
+.index-hero__admin, .index-hero__admin a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.hero-link_li {
+  padding-left: 0;
+  text-decoration: none;
+  color: #e9ece5;
+  margin-right:20px;
+}
+
+.hero-link_li p,  {
+  margin: auto;
+  color: #e9ece5;
+  opacity: 0;
+  font-size: 8px;
+}
+
+.hero_admin-link {
+  color: #e9ece5;
+}
+
+.index-hero__admin:hover .hero_admin-link {
+  opacity: .7;
+}
+
+.index-title {
+  position: absolute;
+  width: 100%;
+  font-size: 100px;
+  color: #e9ece5;
+  bottom: 30%;
+  font-family: 'Black Ops One', sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+
+}
