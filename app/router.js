@@ -31,6 +31,7 @@ Router.map(function() {
         path: '/:game_id',
       });
     });
+
     this.route('activities', function() {
       this.route('new');
       this.route('edit', {

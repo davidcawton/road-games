@@ -3,29 +3,26 @@
 // HEADER
 
 .team-page__header {
+  background: pink;
   display: flex;
-  justify-content: space-between;
-  margin: 1em 2em 0;
+  margin: 2em;
 }
 
-.team-page__title {
-  text-align: center;
-}
-
-.team-page__logo-section {
+.team-page__header-left {
   display: flex;
-  width: 30%;
-  justify-content: center;
+  background: yellow;
+  flex: 1;
+  justify-content:  center;
   align-items: center;
-  border: 1px solid #111;
-
-}
-.team__logo {
-  width: 90%;
-  height: 90%;
-
 }
 
-.team-stats__section {
-  display: flex;
+.team-page__logo {
+  width: 50%;
+  height: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-page__header-right {
+  background: green;
+  flex: 2;
 }

@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    apiHost: 'http://localhost:3000',
+    apiHost: 'https://road-games.herokuapp.com',
     modulePrefix: 'road-games',
     environment: environment,
     baseURL: '/',
@@ -26,10 +26,14 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com",
-      'connect-src': "'self' http://localhost:3000",
+      'connect-src': "'self' https://road-games.herokuapp.com",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
       'media-src': "'self'"
+    },
+
+    'ember-simple-auth': {
+      routeAfterAuthentication: 'admin',
     },
   };
 

@@ -11,14 +11,15 @@ export default DS.Model.extend({
   stadiumName: DS.attr('string'),
   owner: DS.attr('string'),
   coach: DS.attr('string'),
-  coachWins: DS.attr('number'),
-  coachLosses: DS.attr('number'),
-  coachTies: DS.attr('number'),
+  coachWins: DS.attr('string', {defaultValue: 0}),
+  coachLosses: DS.attr('string', {defaultValue: 0}),
+  coachTies: DS.attr('string', {defaultValue: 0}),
   generalManager: DS.attr('string'),
   startPlayer: DS.attr('string'),
   description: DS.attr('string'),
   conference: DS.attr('string'),
   division: DS.attr('string'),
+  airport: DS.attr('string'),
 
   games: DS.hasMany('game', {inverse: null}),
   activities: DS.hasMany('activity', {inverse: null}),
@@ -28,6 +29,20 @@ export default DS.Model.extend({
       let name = Ember.String.dasherize(this.get('name'));
 
       return `/team-logos/${name}.jpg`;
+    }
+  }),
+
+  stadiumImg: Ember.computed('stadiumName', function() {
+    if (this.get('stadiumName')) {
+      let name = Ember.String.dasherize(this.get('stadiumName'));
+      return `/stadiums/${name}.jpg`;
+    }
+  }),
+
+  citySkyline: Ember.computed('city', function() {
+    if (this.get('city')) {
+      let name = Ember.String.dasherize(this.get('city'));
+      return `/skylines/${name}.jpg`;
     }
   }),
 
