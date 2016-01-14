@@ -26,4 +26,8 @@
 <img src="{{model.stadiumImg}}" alt="">
 <img src="{{model.citySkyline}}" alt="">
 <p class="#">{{model.airport}}</p>
+{{team-schedule team=model}}
+{{#link-to "team-page.activities" "Eat"}}Eat{{/link-to}}
+{{#link-to "team-page.activities" "Travel"}}Travel{{/link-to}}
+{{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}}
 {{outlet}}

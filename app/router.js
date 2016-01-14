@@ -50,7 +50,6 @@ Router.map(function() {
   this.route('team-page', {
     path: '/teams/:team_id',
   }, function() {
-    this.route('schedule', {path: '/'});
     this.route('activities', {path: '/activities/:category'});
   });
 });

@@ -34,14 +34,14 @@ export default DS.Model.extend({
 
   stadiumImg: Ember.computed('stadiumName', function() {
     if (this.get('stadiumName')) {
-      let name = Ember.String.dasherize(this.get('stadiumName'));
+      let name = Ember.String.dasherize(this.get('stadiumName').trim());
       return `/stadiums/${name}.jpg`;
     }
   }),
 
   citySkyline: Ember.computed('city', function() {
     if (this.get('city')) {
-      let name = Ember.String.dasherize(this.get('city'));
+      let name = Ember.String.dasherize(this.get('city').trim());
       return `/skylines/${name}.jpg`;
     }
   }),

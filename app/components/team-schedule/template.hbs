@@ -1,6 +1,6 @@
 <div class="schedule-block">
   <p class="schedule__title">Schedule</p>
-  {{#each model.games as |game|}}
+  {{#each team.games as |game|}}
     <ul class="schedule__ul">
       <li class="schedule__li"><img src="{{game.awayTeam.imgUrl}}" alt="" class="schedule-logo"></li>
       <li class="schedule__li hometeam">{{game.awayTeam.name}}</li>

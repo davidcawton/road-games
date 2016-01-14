@@ -1,1 +1,5 @@
+<h2>{{model.category}}</h2>
 
+{{#each model as |activityType|}}
+  <p>{{activityType.model.name}}</p>
+{{/each}}
