@@ -1,4 +1,4 @@
-<div class="team-page__header">
+<div class="team-page__header" style="background-image: url({{model.citySkyline}})">
   <div class="team-page__header-left">
     <img src="{{model.imgUrl}}" alt="" class="team-page__logo">
   </div>
@@ -23,10 +23,13 @@
     </div>
   </div>
 </div>
-
+{{!-- <img src="{{model.stadiumImg}}" alt="">
+<img src="{{model.stadiumMap}}" alt="">
+<img src="{{model.citySkyline}}" alt=""> --}}
+{{!--
 <p class="#">{{model.airport}}</p>
 {{team-schedule team=model}}
 {{#link-to "team-page.activities" "Eat"}}Eat{{/link-to}}
 {{#link-to "team-page.activities" "Travel"}}Travel{{/link-to}}
-{{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}}
+{{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}} --}}
 {{outlet}}

@@ -1,16 +1,23 @@
 <h2 class='activity-detail__title'>{{model.team.name}}</h2>
 <h2 class='activity-detail__title activity-sub'>{{model.category}}</h2>
+<img class='activity-details__icon'src="{{model.activityNameIcon}}" alt="#">
 
 <div class="activity-details">
   <ul class="activity-details__ul">
     <li class="activity-details__li activity-cat">Category:</li>
     <li class="activity-details__li activity-cat">What:</li>
+    <li class="activity-details__li activity-cat">Link:</li>
     <li class="activity-details__li activity-cat">Description:</li>
+    <li class="activity-details__li activity-cat">Address:</li>
+    <li class="activity-details__li activity-cat">Airport Code ('If Applicable'):</li>
   </ul>
   <ul class="activity-details__ul">
     <li class="activity-details__li activity-answer">{{model.category}} </li>
     <li class="activity-details__li activity-answer">{{model.name}}</li>
+    <li class="activity-details__li activity-answer">{{model.linkUrl}}</li>
     <li class="activity-details__li activity-answer">{{model.description}}</li>
+    <li class="activity-details__li activity-answer">{{model.address}}</li>
+    <li class="activity-details__li activity-answer">{{model.airportCode}}</li>
   </ul>
 </div>
 

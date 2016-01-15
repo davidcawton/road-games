@@ -39,6 +39,13 @@ export default DS.Model.extend({
     }
   }),
 
+  stadiumMap: Ember.computed('stadiumName', function() {
+    if (this.get('stadiumName')) {
+      let name = Ember.String.dasherize(this.get('stadiumName').trim());
+      return `/stadium-maps/${name}.jpg`;
+    }
+  }),
+
   citySkyline: Ember.computed('city', function() {
     if (this.get('city')) {
       let name = Ember.String.dasherize(this.get('city').trim());

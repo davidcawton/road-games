@@ -23,10 +23,12 @@
   width: 400px;
 }
 
-.activity-sub {
-  margin-bottom: 40px;
-}
 
+.activity-details__icon {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
 .activity-details {
   display: flex;
   margin: auto;

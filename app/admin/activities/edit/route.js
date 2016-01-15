@@ -14,7 +14,7 @@ export default Ember.Route.extend({
 
       activity.setProperties(formData);
       activity.save().then(() => {
-        this.transitionTo('admin.activities', activity);
+        this.transitionTo('admin.activities.details', activity);
       });
     },
 
