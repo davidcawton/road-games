@@ -9,5 +9,9 @@ export default Ember.Route.extend({
       });
       this.transitionTo('admin');
     },
+
+    logout() {
+      this.get('sesson').invalidate();
+    },
   },
 });
