@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 import Ember from 'ember';
+import getColors from '../color';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
@@ -23,6 +24,14 @@ export default DS.Model.extend({
 
   games: DS.hasMany('game', {inverse: null}),
   activities: DS.hasMany('activity', {inverse: null}),
+
+  teamColors: Ember.computed('name', function() {
+    if (this.get('name')) {
+      let name = Ember.String.dasherize(this.get('name'));
+
+      return getColors(name);
+    }
+  }),
 
   imgUrl: Ember.computed('name', function() {
     if (this.get('name')) {
@@ -51,6 +60,11 @@ export default DS.Model.extend({
       let name = Ember.String.dasherize(this.get('city').trim());
       return `/skylines/${name}.jpg`;
     }
+  }),
+
+  conferenceImg: Ember.computed('conference', function() {
+    let name = Ember.String.dasherize(this.get('conference').trim());
+    return `${name}.png`;
   }),
 
   totalRecord: Ember.computed('totalWins', 'totalLosses', 'totalTies', function() {

@@ -1,40 +1,120 @@
-// TEAM PAGE
+// // TEAM PAGE
 
-// HEADER
+// HEAD
 
 .team-page__header {
-  background: no-repeat center fixed;
-  background-size: cover;
   display: flex;
   margin: 2em 4em;
-}
-
-.team-page__header-left {
-  display: flex;
-  background: rgba(#e9ece5, 0.8);
-  flex: 1;
-  justify-content:  center;
   align-items: center;
+  justify-content: center;
 }
 
-.team-page__logo {
-  width: 50%;
-  height: 50%;
+.header__image {
+  width: 20%;
+  opacity: 0.8;
+}
+
+.team-page__title-sec {
+  width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.team-page__header-right {
-  flex: 2;
-  background: rgba(#e9ece5, 0.8);
+.team-page__title, .team-page__sub-title {
+  text-align: center;
+  margin-bottom: 0;
+  font-family: 'Black Ops One', sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .team-page__title {
-  width: 80%;
+  margin-top: 0;
+  font-size: 100px;
+}
+
+//TEAM INFO
+//
+
+.team-page__info-section {
+  display: flex;
+  margin: 2em 4em;
   justify-content: center;
-  margin: auto;
-  margin-top: 20px;
-  font-family: 'Ultra', sans-serif;
-  background: #fff;
+
+}
+
+.team-info__box {
+  position: relative;
+  margin: 0 1em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-info__box-cover-sm {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background:  red;
+}
+
+.box-record {
+  width: 30%;
+}
+
+.box-leaders{
+  width: 30%;
+}
+
+
+
+.box-about {
+  width: 40%;
+}
+
+.info__title {
   text-align: center;
+  font-family: 'Black Ops One', sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.team__record {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-shadow: 1px 1px 2px #eee;
+}
+
+.conference__logo {
+  display: flex;
+  margin: auto;
+  padding-top: 20px;
+  width: 90px;
+  height: 80px;
+}
+
+.leaders__list {
+  display: flex;
+  justify-content: center;
+  font-family: 'Black Ops One', sans-serif;
+}
+
+.leaders__ul {
+  margin: 5px;
+  padding: 3px;
+  list-style: none;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+#leaders {
+  padding-left: 0;
+  text-decoration: underline;
+}
+
+.team__leaders-li  {
+  padding-bottom: 10px;
 }
