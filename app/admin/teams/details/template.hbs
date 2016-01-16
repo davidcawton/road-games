@@ -8,8 +8,6 @@
     <li class="team-details__li team-cat_li">Record:</li>
     <li class="team-details__li team-cat_li">Where Do the {{model.name}} play?</li>
     <li class="team-details__li team-cat_li">Airport</li>
-    <li class="team-details__li team-cat_li">Conference:</li>
-    <li class="team-details__li team-cat_li">Division:</li>
     <li class="team-details__li team-cat_li">Team Owner:</li>
     <li class="team-details__li team-cat_li">General Manager:</li>
     <li class="team-details__li team-cat_li">Coach:</li>
@@ -21,14 +19,51 @@
     <li class="team-details__li">{{model.totalRecord}}</li>
     <li class="team-details__li">{{model.stadiumName}}</li>
     <li class="team-details__li">{{model.airport}}</li>
-    <li class="team-details__li">{{model.conference}}</li>
-    <li class="team-details__li">{{model.division}}</li>
     <li class="team-details__li">{{model.owner}}</li>
     <li class="team-details__li">{{model.generalManager}}</li>
     <li class="team-details__li">{{model.coach}}</li>
     <li class="team-details__li">{{model.coachRecord}}</li>
     <li class="team-details__li">{{model.startPlayer}}</li>
   </ul>
+</div>
+<div class="team-details__description">
+  <h3> 2016 Notes</h3>
+  <p>{{model.description}}</p>
+</div>
+
+<div class="team-details__color-pallet">
+  <h3 class="color__pallet-title">Team Colors</h3>
+  <div class="color__pallet" style="background: {{model.teamColors.primary}}">
+    <p class="color__pallet-type">Primary</p>
+  </div>
+  <div class="color__pallet" style="background: {{model.teamColors.secondary}}">
+    <p class="color__pallet-type">Secondary</p>
+  </div>
+  <div class="color__pallet last__pallet" style="background: {{model.teamColors.accent}}">
+    <p class="color__pallet-type">Accent</p>
+  </div>
+</div>
+
+
+<div class="team-details__cards">
+  <div class="team-details__picture-card">
+    <img class="card__image" src="{{model.citySkyline}}" alt="">
+    <p class="card__caption">{{model.city}}</p>
+  </div>
+  <div class="team-details__picture-card">
+    <img class="card__image" src="{{model.stadiumImg}}" alt="">
+    <p class="card__caption">{{model.stadiumName}}</p>
+  </div>
+  <div class="team-details__picture-card">
+    <img class="card__image" src="{{model.stadiumMap}}" alt="">
+    <p class="card__caption">{{model.stadiumName}} Map</p>
+  </div>
+  <div class="team-details__picture-card">
+    <img class="card__image" src="{{model.conferenceImg}}" alt="">
+    <p class="card__caption">Conference: {{model.conference}} {{model.division}}</p>
+  </div>
+
+
 </div>
 
 <ul class="admin-team-details__nav">
