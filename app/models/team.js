@@ -41,6 +41,14 @@ export default DS.Model.extend({
     }
   }),
 
+  wordMark: Ember.computed('name', function() {
+    if (this.get('name')) {
+      let name = Ember.String.dasherize(this.get('name'));
+
+      return `/word-marks/${name}.jpg`;
+    }
+  }),
+
   stadiumImg: Ember.computed('stadiumName', function() {
     if (this.get('stadiumName')) {
       let name = Ember.String.dasherize(this.get('stadiumName').trim());

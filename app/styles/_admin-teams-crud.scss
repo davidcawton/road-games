@@ -23,17 +23,14 @@
   vertical-align:  center;
 }
 
-.team-detail__title {
-  font-family: 'Black Ops One', sans-serif;
-  text-align: center;
-  width: 400px;
-  height: 150px;
-  margin: 0;
+.team-details__word-mark {
+  width: 40%;
+  height: 40%;
+  padding: 50px;
 }
 
 .team-details__img {
-  width: 150px;
-  height: 150px;
+  width: 90%;
 }
 
 .team-details, .team-details__description {
@@ -92,6 +89,10 @@
   margin: auto;
   line-height: 40px;
 
+}
+
+#color__pallet-light {
+  color: #fff;
 }
 //Team Facts //
 
