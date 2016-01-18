@@ -13,8 +13,8 @@ const colors = {
   },
 
   ravens: {
-    primary: '#241773',
-    secondary: '#000',
+    primary: '#000',
+    secondary: '#241773',
     accent: '#9E7C0C',
   },
 
@@ -133,8 +133,8 @@ const colors = {
   },
 
   panthers: {
-    primary: '#0085CA',
-    secondary: '#000',
+    primary: '#000',
+    secondary: '#0085CA',
     accent: '#BFC0BF',
   },
 
@@ -169,8 +169,8 @@ const colors = {
   },
 
   cardinals: {
-    primary: '#97233F',
-    secondary: '#000',
+    primary: '#000',
+    secondary: '#97233F',
     accent: '#fff',
   },
 

@@ -1,6 +1,16 @@
 <h2>{{model.category}}</h2>
 
+<ul>
 {{#each model.activities as |activity|}}
-{{activity.name}}
+<li>{{activity.name}}</li>
+<li>{{activity.category}}</li>
+<li>{{activity.description}}</li>
+<li>{{activity.linkUrl}}</li>
+<li>{{activity.team}}</li>
+<li>{{activity.address}}</li>
+<li>{{activity.airportCode}}</li>
+<li><img src="{{activity.pictureUrl}}" alt=""></li>
+<li><img src="{{activity.activityNameIcon}}" alt=""></li>
 
 {{/each}}
+</ul>

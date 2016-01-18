@@ -1,8 +1,8 @@
 <div class="team-page__header">
-  <img class=header__image src="{{model.imgUrl}}" alt="">
+  <img class=header__image src="{{model.teamLogo}}" alt="">
   <div class="team-page__title-sec" style="background: {{model.teamColors.primary}}">
     <h2 class="team-page__sub-title" style="color: {{model.teamColors.secondary}}">The {{model.city}}</h2>
-    <h1 class="team-page__title">{{model.name}}</h1>
+    <h1 class="team-page__title" style='color: {{model.teamColors.accent}}'>{{model.name}}</h1>
   </div>
   <img class=header__image src="{{model.imgUrl}}" alt="">
 </div>
@@ -12,9 +12,10 @@
     <h3 class="info__title"> The 2016 {{model.name}}</h3>
     <p class="team__record" style="background: {{model.teamColors.secondary}}">{{model.totalRecord}}</p>
     <img class='conference__logo' src="{{model.conferenceImg}}" alt="">
-    <div class="team-info__box-cover-sm"><h2 class="team-info__box-cover-text">RECORD</h2></div>
-  </div>
-{{!--
+    <div class="team-info__box-cover-sm">
+      <h2 class="team-info__box-cover-text">RECORD</h2>
+      <img class=cover__image src="{{model.teamLogo}}" alt="">
+    </div>
   </div>
   <div class="team-info__box box-leaders">
     <h3 class="info__title">{{model.name}} Leadership</h3>
@@ -30,6 +31,10 @@
         <li class="team__leaders-li">{{model.coach}}</li>
       </ul>
     </div>
+    <div class="team-info__box-cover-sm">
+      <h2 class="team-info__box-cover-text">BRASS</h2>
+      <img class=cover__image src="{{model.teamLogo}}" alt="">
+    </div>
   </div>
   <div class="team-info__box box-about">
     <h3 class="info__title">About The {{model.name}}</h3>
@@ -39,11 +44,31 @@
     <p class="about__graph">
       {{model.description}}
     </p>
-  </div> --}}
+    <div class="team-info__box-cover-sm">
+      <h2 class="team-info__box-cover-text">MORE</h2>
+      <img class=cover__image src="{{model.teamLogo}}" alt="">
+    </div>
+  </div>
 </div>
 
-{{!--
-<div class="team-page__header" style="background-image: url({{model.citySkyline}})">
+<script>
+  var cover = $('.team-info__box-cover-sm');
+  var box = $('.team-info__box');
+
+  cover.on('click', function() {
+    $(this).fadeOut();
+    ev.preventDefault();
+  });
+
+  box.on('click', function() {
+    $(this).cover.fadeIn();
+
+    ev.preventDefault();
+  });
+
+</script>
+
+{{!-- <div class="team-page__header" style="background-image: url({{model.citySkyline}})">
   <div class="team-page__header-left">
     <img src="{{model.imgUrl}}" alt="" class="team-page__logo">
   </div>
@@ -68,13 +93,13 @@
     </div>
   </div>
 </div>
-{{!-- <img src="{{model.stadiumImg}}" alt="">
+<img src="{{model.stadiumImg}}" alt="">
 <img src="{{model.stadiumMap}}" alt="">
 <img src="{{model.citySkyline}}" alt=""> --}}
-{{!--
+
 <p class="#">{{model.airport}}</p>
 {{team-schedule team=model}}
 {{#link-to "team-page.activities" "Eat"}}Eat{{/link-to}}
 {{#link-to "team-page.activities" "Travel"}}Travel{{/link-to}}
-{{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}} --}}
+{{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}}
 {{outlet}}

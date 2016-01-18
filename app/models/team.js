@@ -37,7 +37,15 @@ export default DS.Model.extend({
     if (this.get('name')) {
       let name = Ember.String.dasherize(this.get('name'));
 
-      return `/team-logos/${name}.jpg`;
+      return `/helmets/${name}.jpg`;
+    }
+  }),
+
+  teamLogo: Ember.computed('name', function() {
+    if (this.get('name')) {
+      let name = Ember.String.dasherize(this.get('name'));
+
+      return `/team-logos/${name}.png`;
     }
   }),
 
@@ -90,4 +98,5 @@ export default DS.Model.extend({
 
     return coachWins + '-' + coachLosses + '-' + coachTies;
   }),
+
 });
