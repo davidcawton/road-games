@@ -12,6 +12,8 @@
 .header__image {
   width: 20%;
   opacity: 0.8;
+  margin: 10px;
+  margin-right: 50px;
 }
 
 .team-page__title-sec {
@@ -32,9 +34,9 @@
   font-size: 100px;
 }
 
-//TEAM INFO
-//RECORD
-
+//TEAM INFO BOXES
+//
+//
 .team-page__info-section {
   display: flex;
   margin: 2em 4em;
@@ -48,7 +50,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.team-info__box-cover-sm {
+.team-info__box-cover {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -58,18 +60,56 @@
   width: 100%;
   height: 100%;
   background: #fff;
+  transition: opacity 500ms;
+
+  &.fade-out {
+    opacity: 0;
+  }
 }
 
 .team-info__box-cover-text {
+  position: absolute;
+  top: 45%;
+  width: 100%;
   font-family: 'Black Ops One', sans-serif;
-  color: #fff;
-  text-shadow: 2px 2px 4px #000000;
+  color: #111;
+  font-size: 4em;
+  text-shadow: 2px 2px 4px #000;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  opacity: .2;
 }
 
+
 .cover__image {
+  width: 70%;
+  height: 70%;
+  opacity: .2;
+}
+
+.cover__image-lg {
   width: 50%;
+  height: 60%;
+}
+
+.team-info__box-cover:hover .cover__image-sm  {
+  opacity: .5;
+}
+
+.team-info__box-cover:hover .cover__image-lg  {
+  opacity: .5;
+}
+
+.team-info__box-cover:hover .team-info__box-cover-text  {
+  animation: textSlideUp;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+}
+
+@keyframes textSlideUp {
+  from {top: 47%}
+  to {top: 45%}
 }
 
 .box-record {
@@ -79,8 +119,6 @@
 .box-leaders{
   width: 30%;
 }
-
-
 
 .box-about {
   width: 40%;
@@ -116,7 +154,9 @@
   display: flex;
   justify-content: center;
   font-family: 'Black Ops One', sans-serif;
+  margin: 1em;
 }
+
 
 .leaders__ul {
   margin: 5px;
@@ -126,6 +166,14 @@
   font-size: 1.5em;
 }
 
+.facts__graph {
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1em;
+  margin: 1em;
+  padding: 3px;
+  text-align: center;
+}
+
 #leaders {
   padding-left: 0;
   text-decoration: underline;
@@ -133,4 +181,88 @@
 
 .team__leaders-li  {
   padding-bottom: 10px;
+}
+
+.coach__record {
+  font-family: 'Black Ops One', sans-serif;
+  font-size: 1.5em;
+  margin: 1em;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    list-style: none;
+  }
+}
+
+
+// TEAM ACTIVITIES PANNELS
+//
+
+.activities-pannel__titles {
+  margin: 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pannel-title {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-left: 1em;
+  margin-bottom: 0;
+  text-align: center;
+  color: #000;
+  font-size: 2em;
+  padding: 25px;
+  font-family: 'Black Ops One', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pannel-title a {
+  color: #000;
+  text-decoration: none;
+}
+
+.activities-pannel__ul {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activities-pannel__li {
+  color: #fff;
+  list-style: none;
+  width: 33.33%;
+  padding: 25px;
+  margin: 0 1em;
+  height: 100%;
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Black Ops One', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  opacity: .6;
+}
+
+.pannel__last {
+  border: none;
+}
+
+.activities-pannel__li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.activities-pannel__li:hover {
+  opacity: 1;
+}
+
+.activities-pannel__li a:active {
+  opacity: 1;
 }

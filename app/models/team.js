@@ -5,6 +5,7 @@ import getColors from '../color';
 export default DS.Model.extend({
   name: DS.attr('string'),
   city: DS.attr('string'),
+  cityDescription: DS.attr('string'),
   established: DS.attr('number'),
   totalWins: DS.attr('number'),
   totalLosses: DS.attr('number'),

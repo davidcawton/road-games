@@ -3,15 +3,17 @@
 .schedule-block {
   display: flex;
   align-items: center;
-  border: 1px solid #111;
-  margin: 0 2em;
+  margin: 2em;
   overflow-x: scroll;
+  justify-content: center;
+  background: #fff;
 }
 
 .schedule__title {
   font-family: 'Black Ops One', sans-serif;
   font-size: 24px;
   margin: 5px;
+  margin-right: 25px;
   text-align: center;
 }
 
@@ -19,7 +21,6 @@
   display: flex;
   align-items: center;
   padding-left: 0;
-  border: 1px solid #ccc;
   margin-left: 5px;
 }
 

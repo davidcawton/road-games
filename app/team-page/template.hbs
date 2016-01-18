@@ -4,22 +4,27 @@
     <h2 class="team-page__sub-title" style="color: {{model.teamColors.secondary}}">The {{model.city}}</h2>
     <h1 class="team-page__title" style='color: {{model.teamColors.accent}}'>{{model.name}}</h1>
   </div>
-  <img class=header__image src="{{model.imgUrl}}" alt="">
 </div>
 
 <div class="team-page__info-section">
+
   <div class="team-info__box box-record" style="background: {{model.teamColors.primary}}">
+    {{#toggle-click as |isShowing|}}
     <h3 class="info__title"> The 2016 {{model.name}}</h3>
     <p class="team__record" style="background: {{model.teamColors.secondary}}">{{model.totalRecord}}</p>
     <img class='conference__logo' src="{{model.conferenceImg}}" alt="">
-    <div class="team-info__box-cover-sm">
-      <h2 class="team-info__box-cover-text">RECORD</h2>
-      <img class=cover__image src="{{model.teamLogo}}" alt="">
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}">
+      <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+      <p class="team-info__box-cover-text" style="color: {{model.teamColors.secondary}}" id="record">RECORD</p>
     </div>
+    {{/toggle-click}}
   </div>
-  <div class="team-info__box box-leaders">
+
+
+  <div class="team-info__box box-leaders" style="background: {{model.teamColors.primary}}">
+    {{#toggle-click as |isShowing|}}
     <h3 class="info__title">{{model.name}} Leadership</h3>
-    <div class="leaders__list">
+    <div class="leaders__list" style="background: {{model.teamColors.secondary}}">
       <ul class="leaders__ul" id="leaders">
         <li class="team__leaders-li">Team Owner:</li>
         <li class="team__leaders-li">General Manager:</li>
@@ -31,75 +36,52 @@
         <li class="team__leaders-li">{{model.coach}}</li>
       </ul>
     </div>
-    <div class="team-info__box-cover-sm">
-      <h2 class="team-info__box-cover-text">BRASS</h2>
-      <img class=cover__image src="{{model.teamLogo}}" alt="">
+    <ul class="coach__record" id="leader-answers" style="background: {{model.teamColors.secondary}}">
+      <li class="coach__record-title">Coach {{model.coach}}'s Record</li>
+      <li class="coach__record-title">{{model.coachRecord}}</li>
+    </ul>
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" >
+      <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+      <p class="team-info__box-cover-text" style="color: {{model.teamColors.secondary}}">BRASS</p>
     </div>
+    {{/toggle-click}}
   </div>
-  <div class="team-info__box box-about">
+
+  <div class="team-info__box box-about" style="background: {{model.teamColors.primary}}">
+    {{#toggle-click as |isShowing|}}
     <h3 class="info__title">About The {{model.name}}</h3>
-    <p class="about__stats">Year Established:  {{model.established}}</p>
-    <p class="about__stats">Conference:  {{model.conference}}</p>
-    <p class="about__stats">Division:  {{model.division}}</p>
-    <p class="about__graph">
+    <div class="leaders__list" style="background: {{model.teamColors.secondary}}">
+      <ul class="leaders__ul" id="leaders">
+        <li class="team__leaders-li">Year Established:</li>
+        <li class="team__leaders-li">Conference:</li>
+        <li class="team__leaders-li">Division:</li>
+      </ul>
+      <ul class="leaders__ul" id="leader-answers">
+        <li class="team__leaders-li">{{model.established}}</li>
+        <li class="team__leaders-li">{{model.conference}}</li>
+        <li class="team__leaders-li">{{model.division}}</li>
+      </ul>
+    </div>
+    <p class="facts__graph" style="background: {{model.teamColors.secondary}}">
       {{model.description}}
     </p>
-    <div class="team-info__box-cover-sm">
-      <h2 class="team-info__box-cover-text">MORE</h2>
-      <img class=cover__image src="{{model.teamLogo}}" alt="">
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}">
+      <img class="cover__image cover__image-lg" src="{{model.teamLogo}}" alt="">
+      <p class="team-info__box-cover-text box-cover-text-lg" style="color: {{model.teamColors.secondary}}">MORE</p>
     </div>
+    {{/toggle-click}}
   </div>
 </div>
 
-<script>
-  var cover = $('.team-info__box-cover-sm');
-  var box = $('.team-info__box');
 
-  cover.on('click', function() {
-    $(this).fadeOut();
-    ev.preventDefault();
-  });
-
-  box.on('click', function() {
-    $(this).cover.fadeIn();
-
-    ev.preventDefault();
-  });
-
-</script>
-
-{{!-- <div class="team-page__header" style="background-image: url({{model.citySkyline}})">
-  <div class="team-page__header-left">
-    <img src="{{model.imgUrl}}" alt="" class="team-page__logo">
-  </div>
-  <div class="team-page__header-right">
-
-    <div class="team-page__stats">
-      <ul class="team-stats__ul">
-        <li class="team-stats__li">Year Established: {{model.established}}</li>
-        <li class="team-stats__li">Record: {{model.totalRecord}}</li>
-        <li class="team-stats__li">Where Do the {{model.name}} play? {{model.stadiumName}}</li>
-        <li class="team-stats__li">Conference: {{model.conference}}</li>
-        <li class="team-stats__li">Division: {{model.division}}</li>
-      </ul>
-      <ul class="team-stats__ul">
-        <li class="team-stats__li">Team Owner: {{model.owner}}</li>
-        <li class="team-stats__li">General Manager: {{model.generalManager}}</li>
-        <li class="team-stats__li">Coach: {{model.coach}}</li>
-        <li class="team-stats__li">Coach Record: {{model.coachRecord}}</li>
-        <li class="team-stats__li">Star Player: {{model.startPlayer}}</li>
-        <li class="team-stats__li">Fun Fact: {{model.description}}</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<img src="{{model.stadiumImg}}" alt="">
-<img src="{{model.stadiumMap}}" alt="">
-<img src="{{model.citySkyline}}" alt=""> --}}
-
-<p class="#">{{model.airport}}</p>
 {{team-schedule team=model}}
-{{#link-to "team-page.activities" "Eat"}}Eat{{/link-to}}
-{{#link-to "team-page.activities" "Travel"}}Travel{{/link-to}}
-{{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}}
+
+<div class="activities-pannel__titles">
+  <p class="pannel-title">{{#link-to 'team-page'}}{{model.city}}{{/link-to}}</p>
+  <ul class="activities-pannel__ul">
+    <li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> {{#link-to "team-page.activities" "Eat"}}Eat{{/link-to}}</li>
+    <li class="activities-pannel__li" style="background: {{model.teamColors.primary}}"> {{#link-to "team-page.activities" "Travel"}}Travel{{/link-to}}</li>
+    <li class="activities-pannel__li pannel__last" style="background: {{model.teamColors.primary}}"> {{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}}</li>
+  </ul>
+</div>
 {{outlet}}
