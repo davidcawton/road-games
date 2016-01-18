@@ -7,7 +7,7 @@ export default Ember.Route.extend({
       this.get('session').authenticate('authenticator:application', email, password).catch((reason) => {
         console.log(reason);
       });
-      this.transitionTo('admin');
+      this.transitionTo('teams');
     },
 
     logout() {

@@ -1,6 +1,32 @@
 
 <div class="index-pannel">
-<h1>About {{model.city}}</h1>
-<img src="{{model.citySkyline}}" alt="">
-<p>{{model.cityDescription}}</p>
+  <p class='index-pannel__graph'>{{model.cityDescription}}</p>
+  <img class='index-pannel__img' src="{{model.citySkyline}}" alt="">
+
 </div>
+
+
+<style>
+  .index-pannel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5em 2em;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .index-pannel__img {
+    margin: 25px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .index-pannel__graph {
+    margin: 10px;
+    width: 80%;
+    text-align: justify;
+    font-size: 1.5em;
+    font-family: 'Black Ops One', sans-serif;
+  }
+</style>

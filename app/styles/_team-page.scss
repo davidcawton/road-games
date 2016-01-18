@@ -4,7 +4,7 @@
 
 .team-page__header {
   display: flex;
-  margin: 2em 4em;
+  margin: 2em;
   align-items: center;
   justify-content: center;
 }
@@ -39,15 +39,16 @@
 //
 .team-page__info-section {
   display: flex;
-  margin: 2em 4em;
+  margin: 2em;
   justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
 .team-info__box {
+  flex: 1;
   position: relative;
-  margin: 0 1em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .team-info__box-cover {
@@ -84,12 +85,12 @@
 .cover__image {
   width: 70%;
   height: 70%;
-  opacity: .2;
+  opacity: 0;
 }
 
 .cover__image-lg {
-  width: 50%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
 }
 
 .team-info__box-cover:hover .cover__image-sm  {
@@ -207,6 +208,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 25px;
 }
 
 .pannel-title {
@@ -247,7 +249,7 @@
   text-align: center;
   font-family: 'Black Ops One', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  opacity: .6;
+  opacity: .8;
 }
 
 .pannel__last {
@@ -263,6 +265,6 @@
   opacity: 1;
 }
 
-.activities-pannel__li a:active {
+.activities-pannel__li a::active {
   opacity: 1;
 }
