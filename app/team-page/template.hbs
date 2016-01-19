@@ -75,9 +75,11 @@
   <div class="activities-pannel__titles">
     <p class="pannel-title">{{#link-to 'team-page'}}{{model.city}}{{/link-to}}</p>
     <ul class="activities-pannel__ul">
-      <li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> {{#link-to "team-page.activities" "Eat"}}Eat{{/link-to}}</li>
-      <li class="activities-pannel__li" style="background: {{model.teamColors.primary}}"> {{#link-to "team-page.activities" "Travel"}}Travel{{/link-to}}</li>
-      <li class="activities-pannel__li pannel__last" style="background: {{model.teamColors.primary}}"> {{#link-to "team-page.activities" "Stay"}}Stay{{/link-to}}</li>
+      {{#link-to "team-page.activities" "Eat"}}<li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> Eat</li>{{/link-to}}
+      {{#link-to "team-page.activities" "Drink"}}<li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> Drink</li>{{/link-to}}
+      {{#link-to "team-page.activities" "Travel"}}<li class="activities-pannel__li" style="background: {{model.teamColors.primary}}"> Travel</li>{{/link-to}}
+      {{#link-to "team-page.activities" "Stay"}}<li class="activities-pannel__li pannel__last" style="background: {{model.teamColors.primary}}"> Stay</li>{{/link-to}}
+      {{#link-to "team-page.activities" "Sports"}}<li class="activities-pannel__li pannel__last" style="background: {{model.teamColors.primary}}"> Sports</li>{{/link-to}}
     </ul>
   </div>
 </div>

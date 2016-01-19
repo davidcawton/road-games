@@ -32,6 +32,15 @@
         {{/each}}
       {{/mdl-menu}}
     </li>
-    <li class="create-a-game__li">{{mdl-textfield class="new-game-form__input" type='date' value=formValues.Date}}</li>
+    <li class="create-a-game__li">
+      <label>
+        Game Day:
+        {{#pikaday-with-time startValue=formValues.date binding=formValues.date as |date|}}
+          <div class="mdl-textfield mdl-js-textfield">
+            {{pikaday-input class="mdl-textfield__input" value=date}}
+          </div>
+        {{/pikaday-with-time}}
+      </label>
+    </li>
   </ul>
 </div>

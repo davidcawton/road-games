@@ -159,7 +159,7 @@
   margin: auto;
   padding-top: 20px;
   width: 90px;
-  height: 80px;
+  height: 90px;
 }
 
 .leaders__list {
@@ -226,15 +226,12 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
-  margin-left: 1em;
   margin-bottom: 0;
   text-align: center;
   color: #000;
   font-size: 2em;
   padding: 25px;
-
   background-color: #fff;
-
   font-family: 'Black Ops One', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -243,25 +240,29 @@
   color: #000;
   text-decoration: none;
   background-color: #fff;
+  text-decoration: none;
 }
+
 
 .activities-pannel__ul {
   display: flex;
   width: 100%;
   margin: auto;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  text-decoration: none;
+
 }
 
-.activities-pannel__li {
+.activities-pannel__li, .activities-pannel__li a {
   color: #fff;
   list-style: none;
-  width: 33.33%;
   padding: 25px;
   margin: 0 1em;
   height: 100%;
   font-size: 2em;
   text-align: center;
+  text-decoration: none;
   font-family: 'Black Ops One', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   opacity: .8;

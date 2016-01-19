@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  date: DS.attr('date'),
+  date: DS.attr('moment'),
   homeTeam: DS.belongsTo('team', {inverse: null}),
   awayTeam: DS.belongsTo('team', {inverse: null}),
   winningTeam: DS.belongsTo('team', {inverse: null}),

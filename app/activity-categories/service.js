@@ -6,5 +6,7 @@ export default Ember.Service.extend({
     'Eat',
     'Drink',
     'Stay',
+    'City',
+    'Sports',
   ],
 });

@@ -3,12 +3,13 @@ import Ember from 'ember';
 
 export default DS.Model.extend({
   name: DS.attr('string'),
+  activityName: DS.attr('string'),
   description: DS.attr('string'),
   linkUrl: DS.attr('string'),
   category: DS.attr('string'),
   team: DS.belongsTo('team'),
   airportCode: DS.attr('string'),
-  address: DS.attr('string'),
+  address: DS.attr(),
 
   pictureUrl: Ember.computed('category', function() {
     if (this.get('category')) {

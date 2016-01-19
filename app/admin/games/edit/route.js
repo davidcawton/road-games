@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export default Ember.Route.extend({
   model(params) {
@@ -12,7 +13,7 @@ export default Ember.Route.extend({
     saveGame(formData) {
       let game = this.modelFor(this.routeName).game;
 
-      game.setProperties(Ember.getProperties(formData, 'date', 'homeScore', 'awayScore'));
+      game.setProperties(formData);
       game.save().then(() => {
         this.transitionTo('admin.games.details', game);
       });
