@@ -13,25 +13,24 @@
    </ul>
    {{/link-to}}
     <h1 class="index-title">Road Warrior </h1>
+    <div class="index-hero-links">
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'teams'}}{{#mdl-button icon='apps' class="link-button"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'teams'}}Teams{{/link-to}}</li>
+      </ul>
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'register'}}{{#mdl-button icon="face"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'teams'}}Sign Up{{/link-to}}</li>
+      </ul>
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'index' action='logout'}}{{#mdl-button icon="pan_tool"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'index'}}Logout{{/link-to}}</li>
+      </ul>
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'login'}}{{#mdl-button icon="vpn_key"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'login'}}Login{{/link-to}}</li>
+      </ul>
+    </div>
   </div>
 </div>
-<div class="index-hero-links">
-  <ul class="index-hero-links__ul">
-    <li class='hero__link'>{{#link-to 'teams'}}{{#mdl-button icon='apps'}}{{/mdl-button}}{{/link-to}}</li>
-    <li class='hero__link'>{{#link-to 'teams'}}Teams{{/link-to}}</li>
-  </ul>
-  <ul class="index-hero-links__ul">
-    <li class='hero__link'>{{#link-to 'register'}}{{#mdl-button icon="face"}}{{/mdl-button}}{{/link-to}}</li>
-    <li class='hero__link'>{{#link-to 'teams'}}Sign Up{{/link-to}}</li>
-  </ul>
-  <ul class="index-hero-links__ul">
-    <li class='hero__link'>{{#link-to 'index' action='logout'}}{{#mdl-button icon="pan_tool"}}{{/mdl-button}}{{/link-to}}</li>
-    <li class='hero__link'>{{#link-to 'index'}}Logout{{/link-to}}</li>
-  </ul>
-  <ul class="index-hero-links__ul">
-    <li class='hero__link'>{{#link-to 'login'}}{{#mdl-button icon="vpn_key"}}{{/mdl-button}}{{/link-to}}</li>
-    <li class='hero__link'>{{#link-to 'login'}}Login{{/link-to}}</li>
-  </ul>
-</div>
-
   {{outlet}}

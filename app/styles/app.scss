@@ -1,5 +1,18 @@
 @import 'material-design-lite';
 
+
+html {
+  position: relative;
+
+}
+
+body{
+  position: absolute;
+  top: 0;
+  // background: url('/feild.jpg') center fixed no-repeat;
+  background-size: cover;
+  margin-bottom: 2rem;
+}
 //INDEX - LANDING PAGE
 @import 'index';
 

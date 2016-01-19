@@ -6,9 +6,9 @@
     {{#link-to 'team-page' teamList}}
         <li class="team-list__card">
           <img class="team-card__img"src="{{teamList.imgUrl}}">
-          <div class="team-card__img-cover"></div>
-          <p class="team-card__cat tc_city">{{teamList.city}}</p>
-          <p class="team-card__cat tc_name ">{{teamList.name}}</p>
+          <div class="team-card__img-cover"  style='background-color: {{teamList.teamColors.primary}}'></div>
+          <p class="team-card__cat tc_city" style='color: {{teamList.teamColors.secondary}}'>{{teamList.city}}</p>
+          <p class="team-card__cat tc_name" style='color: {{teamList.teamColors.secondary}}'>{{teamList.name}}</p>
         </li>
       {{/link-to}}
       {{/each}}

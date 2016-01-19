@@ -1,12 +1,22 @@
 // // TEAM PAGE
+.team-page {
+  background: rgba(250, 250, 250, 0.5);
+  margin: 2em;
+  margin-bottom: 0;
+  padding-top: 1em;
+}
 
 // HEAD
 
 .team-page__header {
   display: flex;
   margin: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .header__image {
@@ -40,6 +50,7 @@
 .team-page__info-section {
   display: flex;
   margin: 2em;
+  margin-bottom: 0;
   justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -83,14 +94,14 @@
 
 
 .cover__image {
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
   opacity: 0;
 }
 
 .cover__image-lg {
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
 }
 
 .team-info__box-cover:hover .cover__image-sm  {
@@ -208,7 +219,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+
 }
 
 .pannel-title {
@@ -221,6 +232,9 @@
   color: #000;
   font-size: 2em;
   padding: 25px;
+
+  background-color: #fff;
+
   font-family: 'Black Ops One', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -228,6 +242,7 @@
 .pannel-title a {
   color: #000;
   text-decoration: none;
+  background-color: #fff;
 }
 
 .activities-pannel__ul {

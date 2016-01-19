@@ -4,8 +4,9 @@
 
 .admin-teams {
   position: relative;
-  margin: 2.5em;
+  margin: 2em;
 }
+
 .admin-team__title {
   font-family: 'Black Ops One', sans-serif;
   display: flex;
@@ -15,6 +16,8 @@
   margin-top: 20px;
   align-items: center;
   justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
   margin: auto;
 }
 
@@ -105,6 +108,7 @@
 .admin-team__nav {
   display: flex;
   margin-top: 5px;
+  margin-left: 1em;
   height: 50px;
   width: 40%;
   position: fixed;
