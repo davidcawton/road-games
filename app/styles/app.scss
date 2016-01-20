@@ -17,6 +17,9 @@ body{
   background-size: cover;
   margin-bottom: 2rem;
 }
+
+
+
 //INDEX - LANDING PAGE
 @import 'index';
 
@@ -50,3 +53,7 @@ body{
 @import '_admin-activities-index';
 @import '_admin-activities-crud';
 @import '_admin-create-activity';
+
+@import 'smaller-screen'; //1600px-1024px
+@import 'tablet-view'; //1023px -
+@import 'mobile-view';
