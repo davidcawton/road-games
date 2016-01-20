@@ -11,7 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy":  "broccoli build dist && surge dist davidcawton.surge.sh && trash dist"
+    "deploy":  "ember build -e production && cp dist/index.html dist/200.html && surge dist road-games.surge.sh"
   },
   "repository": "",
   "engines": {

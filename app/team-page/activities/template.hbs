@@ -1,16 +1,21 @@
-<h2>{{model.category}}</h2>
+{{!-- ACTIVITIES PANNELS --}}
 
-<ul>
-{{#each model.activities as |activity|}}
-<li>{{activity.name}}</li>
-<li>{{activity.category}}</li>
-<li>{{activity.description}}</li>
-<li>{{activity.linkUrl}}</li>
-<li>{{activity.team}}</li>
-<li>{{activity.address}}</li>
-<li>{{activity.airportCode}}</li>
-<li><img src="{{activity.pictureUrl}}" alt=""></li>
-<li><img src="{{activity.activityNameIcon}}" alt=""></li>
 
-{{/each}}
-</ul>
+<div class="pannel" style='background:{{model.team.teamColors.secondary}}'>
+  <div class="pannle-title-section">
+
+  </div>
+  <div class="pannel-info">
+    {{#each model.activities as |activity|}}
+      <ul class="pannel__ul" style="background:{{model.team.teamColors.primary}}">
+        <li class="pannel__li pannel-li__icon"><img src="{{activity.activityNameIcon}}" alt=""></li>
+        <li class="pannel__li pannel-li__title"><a href="{{activity.linkUrl}}" target="_blank" >{{activity.activityName}}</a></li>
+        <li class="pannel__li pannel-li__description">{{activity.description}}</li>
+        <li class="pannel__li">{{activity.address}}</li>
+        {{#if activity.airportCode}}
+        <li class="pannel__li">{{activity.airportCode}}</li>
+        {{/if}}
+      </ul>
+    {{/each}}
+  </div>
+</div>

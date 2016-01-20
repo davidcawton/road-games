@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     let team = this.modelFor('team-page');
 
     return Ember.RSVP.hash({
+      team,
       activities: this.store.query('activity', {team: team.id, category}),
       category,
     });

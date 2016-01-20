@@ -1,78 +1,23 @@
 
-<div class="index-pannel">
+{{!-- INDEX PANNEL --}}
+
+<div class="pannel">
   <div class="pannle-title-section">
     <h2 class="pannel__title" style="color: {{model.team.teamColors.primary}}">{{model.team.city}}</h2>
-    <img class='index-pannel__img' src="{{model.team.citySkyline}}" alt="">
-    <p class='index-pannel__graph'>{{model.team.cityDescription}}</p>
+    <img class='pannel-title__img' src="{{model.team.citySkyline}}" alt="">
+    <p class='pannel-description__graph'>{{model.team.cityDescription}}</p>
   </div>
-  <div class="index-pannel-info">
+  <div class="pannel-info">
     {{#each model.activities as |activity|}}
-      <ul class="index-pannel-ul" style="background:{{model.team.teamColors.primary}}">
-        <li class="index-pannel-li ipli-icon"><img src="{{activity.activityNameIcon}}" alt=""></li>
-        <li class="index-pannel-li"><a href="{{activity.linkUrl}}" target="_blank" class="index-pannel-li ipli-title" >{{activity.activityName}}</a></li>
-        <li class="index-pannel-li ipli-description">{{activity.description}}</li>
-        <li class="index-pannel-li">{{activity.address}}</li>
+      <ul class="pannel__ul" style="background:{{model.team.teamColors.primary}}">
+        <li class="pannel__li pannel-li__icon"><img src="{{activity.activityNameIcon}}" alt=""></li>
+        <li class="pannel__li pannel-li__title"><a href="{{activity.linkUrl}}" target="_blank" >{{activity.activityName}}</a></li>
+        <li class="pannel__li pannel-li__description">{{activity.description}}</li>
+        <li class="pannel__li">{{activity.address}}</li>
         {{#if activity.airportCode}}
-        <li class="index-pannel-li">{{activity.airportCode}}</li>
+        <li class="pannel__li">{{activity.airportCode}}</li>
         {{/if}}
       </ul>
     {{/each}}
   </div>
 </div>
-
-
-<style>
-
-  .pannle-title-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-  .index-pannel-info {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .index-pannel-info ul {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    padding: 10px;
-    margin: 1em 2em;
-
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-  .index-pannel-info li{
-    list-style: none;
-    padding: 5px;
-    color: #fff;
-    font-size: 18px;
-  }
-
-  .ipli-title,   .ipli-title a {
-    padding-bottom: 5px;
-    text-decoration: none;
-    color: #eee;
-  }
-
-  .ipli-title:hover {
-    color: #fff;
-    font-weight: bold;
-  }
-
-  .ipli-icon {
-    background: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 10px;
-  }
-
-  .ipli-description {
-    font-style: italic;
-    margin-bottom: 20px;
-
-  }
-</style>
