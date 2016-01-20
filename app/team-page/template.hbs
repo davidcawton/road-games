@@ -73,7 +73,7 @@
   </div>
 
   <div class="activities-pannel__titles">
-    <p class="pannel-title">{{#link-to 'team-page'}}{{model.city}}{{/link-to}}</p>
+    {{#link-to 'team-page'}}<p class="pannel-title">{{model.city}}</p>{{/link-to}}
     <ul class="activities-pannel__ul">
       {{#link-to "team-page.activities" "Eat"}}<li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> Eat</li>{{/link-to}}
       {{#link-to "team-page.activities" "Drink"}}<li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> Drink</li>{{/link-to}}
