@@ -20,4 +20,16 @@
       </ul>
     {{/each}}
   </div>
+
+
 </div>
+<div class="disqus-section">
+  {{disqus-comments identifier=model.team.id title=model.team.name}}
+</div>
+
+<style>
+  .disqus-section {
+
+    margin: 4em;
+  }
+</style>

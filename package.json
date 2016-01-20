@@ -11,7 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy":  "ember build -e production && cp dist/index.html dist/200.html && surge dist road-games.surge.sh"
+    "deploy": "ember build -e production && cp dist/index.html dist/200.html && surge dist road-games.surge.sh"
   },
   "repository": "",
   "engines": {
@@ -41,6 +41,7 @@
     "ember-composability": "0.2.1",
     "ember-data": "^2.2.1",
     "ember-disable-proxy-controllers": "^1.0.1",
+    "ember-disqus": "0.2.0",
     "ember-export-application-global": "^1.0.4",
     "ember-getowner-polyfill": "1.0.0",
     "ember-i-am": "1.0.0",

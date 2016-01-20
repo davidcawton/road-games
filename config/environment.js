@@ -35,6 +35,10 @@ module.exports = function(environment) {
     'ember-simple-auth': {
       routeAfterAuthentication: 'admin',
     },
+
+    disqus: {
+      shortname: 'roadgame'
+    }
   };
 
   if (environment === 'development') {

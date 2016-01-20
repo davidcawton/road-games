@@ -3,7 +3,7 @@ const colors = {
   jets: {
     primary: '#203731',
     secondary: '#fff',
-    accent: '',
+    accent: '#111',
   },
 
   browns: {
@@ -51,7 +51,7 @@ const colors = {
   colts: {
     primary: '#002C5F',
     secondary: '#fff',
-    accent: '#fff',
+    accent: '#000',
   },
 
   titans: {
@@ -152,8 +152,8 @@ const colors = {
 
   buccaneers: {
     primary: '#D50A0A',
-    secondary: '#34302B',
-    accent: '#FF7900',
+    secondary: '#FF7900',
+    accent: '#34302B',
   },
 
   seahawks: {
