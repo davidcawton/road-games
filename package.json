@@ -10,7 +10,8 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy":  "broccoli build dist && surge dist davidcawton.surge.sh && trash dist"
   },
   "repository": "",
   "engines": {
