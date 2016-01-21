@@ -1,7 +1,7 @@
 // // TEAM PAGE
 .team-page {
   background: rgba(250, 250, 250, 0.5);
-  margin: 2em;
+  margin: 0 2em;
   margin-bottom: 0;
   padding-top: 1em;
 }
@@ -10,24 +10,34 @@
 
 .team-page__header {
   display: flex;
-  margin: 2em;
+  margin: 0 2em 2em;
+  height: 400px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.team-page__header-cover {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  opacity: .5;
+}
+
 .header__image {
-  width: 20%;
   opacity: 0.8;
   margin: 10px;
-  margin-right: 50px;
+  width: 350px;
+  text-align: center;
 }
 
 .team-page__title-sec {
-  width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -49,16 +59,21 @@
 //
 .team-page__info-section {
   display: flex;
-  margin: 2em;
+  margin: 2em 4em; ;
   margin-bottom: 0;
   justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .team-info__box {
   position: relative;
-
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 10px;
 }
 
 .team-info__box-cover {
@@ -68,14 +83,23 @@
   align-items: center;
   justify-content: center;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: #fff;
+  opacity: 1;
   transition: opacity 500ms;
 
   &.fade-out {
     opacity: 0;
   }
+}
+
+.info-center {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .team-info__box-cover-text {
@@ -85,7 +109,7 @@
   font-family: 'Black Ops One', sans-serif;
   color: #fff;
   font-size: 4em;
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 4px #fff;
   text-align: center;
   margin-bottom: 10px;
   opacity: .2;
@@ -124,15 +148,15 @@
 }
 
 .box-record {
-  width: 30%;
+  width: 33.33%;
 }
 
 .box-leaders{
-  width: 30%;
+  width: 33.33%;
 }
 
 .box-about {
-  width: 40%;
+  width: 33.33%;
 }
 
 .info__title {
@@ -149,8 +173,7 @@
   padding: 5px;
   font-family: 'Black Ops One', sans-serif;
   font-size: 2em;
-  color: #eee;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: #fff;
   text-shadow: 1px 1px 2px #000;
 }
 

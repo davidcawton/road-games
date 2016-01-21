@@ -3,13 +3,11 @@
 
 <div class="pannel">
   <div class="pannle-title-section">
-    <h2 class="pannel__title" style="color: {{model.team.teamColors.primary}}">{{model.team.city}}</h2>
-    <img class='pannel-title__img' src="{{model.team.citySkyline}}" alt="">
     <p class='pannel-description__graph'>{{model.team.cityDescription}}</p>
   </div>
   <div class="pannel-info">
     {{#each model.activities as |activity|}}
-      <ul class="pannel__ul" style="background:{{model.team.teamColors.primary}}">
+      <ul class="pannel__ul">
         <li class="pannel__li pannel-li__icon"><img src="{{activity.activityNameIcon}}" alt=""></li>
         <li class="pannel__li pannel-li__title"><a href="{{activity.linkUrl}}" target="_blank" >{{activity.activityName}}</a></li>
         <li class="pannel__li pannel-li__description">{{activity.description}}</li>
@@ -23,13 +21,3 @@
 
 
 </div>
-<div class="disqus-section">
-  {{disqus-comments identifier=model.team.id title=model.team.name}}
-</div>
-
-<style>
-  .disqus-section {
-
-    margin: 4em;
-  }
-</style>
