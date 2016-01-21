@@ -19,6 +19,7 @@
 
   .index-title {
     font-size: 30px;
+    text-align: center;
   }
 
   .index-header h1 {
@@ -26,9 +27,13 @@
   }
 
   .index-middle ul {
-    font-size: 1em;
+    font-size: 12px;
+    text-align: center;
   }
 
+  .index-middle__steps {
+    display: none;
+  }
   .index-hero__admin {
     margin: 0;
   }
@@ -36,6 +41,10 @@
   .index-hero-links__ul {
     padding-left: 0;
     margin: 10px;
+  }
+
+  .index-section h1 {
+    font-size: 30px;
   }
 //LOGIN FORM
 

@@ -23,13 +23,20 @@
   }
 
   .index-header h1 {
-    font-size: 4em;
+    font-size: 2em;
+    text-align: center;
   }
+
+
 
   .index-middle ul {
-    font-size: 1em;
+    font-size: 12px;
+    text-align: center;
   }
 
+  .index-middle__steps {
+    display: none;
+  }
   .index-hero__admin {
     margin: 0;
   }
