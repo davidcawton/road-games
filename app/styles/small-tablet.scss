@@ -1,0 +1,219 @@
+//SMALL SCREENS
+
+@media only screen and (max-width: 729px) and (min-width: 480px) {
+
+// INDEX
+//
+
+  .index-hero__left {
+    display: none;
+  }
+
+  .index-hero__right {
+    width: 100%;
+  }
+  .index {
+    margin-bottom: 0;
+    height: 150px;
+  }
+
+
+  .index-title {
+    font-size: 30px;
+  }
+
+  .index-header h1 {
+    font-size: 4em;
+  }
+
+  .index-middle ul {
+    font-size: 1em;
+  }
+
+  .index-hero__admin {
+    margin: 0;
+  }
+
+  .index-hero-links__ul {
+    padding-left: 0;
+    margin: 10px;
+  }
+//LOGIN FORM
+
+  .login-form {
+    flex-direction: column;
+  }
+
+
+//REGISTRATION FORM
+
+  .register {
+    flex-direction: column;
+  }
+
+  .register-title {
+    font-size: 30px;
+  }
+  .register-form__graph {
+    flex-direction: column;
+  }
+
+//TEAM PAGES
+
+  .team-list__title {
+    text-align: center;
+  }
+
+  .team-page {
+    margin-top: 1em;
+    padding-top: 0;
+  }
+
+
+  .team-page__haeder {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .team-page__title  {
+    font-size: 40px;
+  }
+
+  .team-page__sub-title {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .team-page__info-section {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .info__title {
+    font-size: 30px;
+    margin: 0;
+  }
+  .team-info__box {
+    margin: 1em;
+    width: 90%;
+    height: 300px;
+  }
+
+  .cover__image {
+    height: 70%;
+  }
+
+  .leaders__ul {
+    font-size: 16px;
+  }
+
+  .coach__record {
+    display: none;
+  }
+  //ACTIVITY PANNEL
+
+  .activities-pannel__titles {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .pannel-title, .pannel-title a {
+    margin-bottom: 1em;
+  }
+
+  .activities-pannel__ul {
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .activities-pannel__li, .activities-pannel__li a {
+    width: 400px;
+    margin: 0;
+  }
+
+  .pannel-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pannel-info ul {
+    width: 90%;
+    justify-content: center;
+  }
+
+  //ADMIN
+
+    .game-details, .activity-details, .team-details, .team-details__description {
+      width: 300px;
+      margin-right: 0;
+    }
+
+    .game-details ul, .team-details ul {
+      font-size: 10px;
+      margin: 0;
+    }
+
+    .team-details li {
+      padding-bottom: 5px;
+    }
+    .admin-team__nav {
+      margin: 0;
+      padding-left:0;
+    }
+
+    .admin-team_nav-li {
+      padding-left: 0;
+      display: flex;
+    }
+
+    .admin-team-details__nav {
+      padding-left: 0;
+    }
+
+    .team-details__nav-li {
+      padding-left: 0;
+    }
+    .new-team__title {
+      display: none;
+    }
+
+    .team-details__color-pallet {
+      width: 300px;
+      margin-right: 0;
+    }
+
+    .team-details__picture-card {
+      margin-right: 0;
+      margin-left: 109px;
+      width: 300px;
+    }
+
+    .game-detail__title,
+    .activity-detail__title,
+    .admin-activity-form__title,
+    .new-team-form__title,
+    .new-game-form__title {
+        font-size: 30px;
+        width: 300px;
+        text-align: center;
+      }
+
+    .game-details__ul {
+      padding-left: 10px;
+    }
+
+    .activity-details__icon,
+    .new-activity__btn-title,
+    .ad__title,
+    .form__btn-title,
+    .new-game__title,
+    .td__title {
+      display: none;
+    }
+
+    .activity-details__ul {
+      margin: 0;
+      font-size: 10px;
+    }
+}

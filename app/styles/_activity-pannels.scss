@@ -37,6 +37,7 @@
 
 .activities-pannel__ul {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   margin: auto;
   justify-content: center;
@@ -48,8 +49,9 @@
 .activities-pannel__li, .activities-pannel__li a {
   color: #fff;
   list-style: none;
-  padding: 25px;
-  margin: 0 1em;
+  padding: 10px;
+  width: 300px;
+  margin: 1em;
   height: 100%;
   font-size: 2em;
   text-align: center;

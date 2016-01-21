@@ -55,5 +55,6 @@ body{
 @import '_admin-create-activity';
 
 @import 'smaller-screen'; //1600px-1024px
-@import 'tablet-view'; //1023px -
-@import 'mobile-view';
+@import 'tablet-view'; //1023px - 730px
+@import 'small-tablet'; //729px -480px
+@import 'mobile-view'; //479px min.
