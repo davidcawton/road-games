@@ -1,11 +1,8 @@
 {{!-- ACTIVITIES PANNELS --}}
 
 
-<div class="pannel">
-  <div class="pannle-title-section">
-
-  </div>
-  <div class="pannel-info">
+<div class="pannel" style="background: url({{model.citySkyline}}) fixed center no-repeat; background-size: cover">
+  <div class="pannel-info" >
     {{#each model.activities as |activity|}}
       <ul class="pannel__ul">
         <li class="pannel__li pannel-li__icon"><a href="{{activity.linkUrl}}" target="_blank" ><img src="{{activity.activityNameIcon}}" alt=""></a></li>

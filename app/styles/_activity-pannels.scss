@@ -105,10 +105,10 @@
 //  Pannel
 
   .pannel {
+    position: relative;
     margin: 2em 4em;
     margin-top: 2em;
     padding-top: 1em;
-    background-color: rgba(250, 250, 250, 0.5);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
@@ -138,6 +138,7 @@
       flex-wrap: wrap;
       display: flex;
       justify-content: center;
+      background: rgba(255, 255, 255, 0.56);
     }
 
     .pannel-info ul {
