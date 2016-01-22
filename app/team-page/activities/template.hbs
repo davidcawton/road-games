@@ -8,7 +8,7 @@
   <div class="pannel-info">
     {{#each model.activities as |activity|}}
       <ul class="pannel__ul">
-        <li class="pannel__li pannel-li__icon"><img src="{{activity.activityNameIcon}}" alt=""></li>
+        <li class="pannel__li pannel-li__icon"><a href="{{activity.linkUrl}}" target="_blank" ><img src="{{activity.activityNameIcon}}" alt=""></a></li>
         <li class="pannel__li pannel-li__title"><a href="{{activity.linkUrl}}" target="_blank" >{{activity.activityName}}</a></li>
         <li class="pannel__li pannel-li__description">{{activity.description}}</li>
         <li class="pannel__li">{{activity.address}}</li>
