@@ -24,8 +24,6 @@
 </div>
 
 {{outlet}}
-
-
 <div class="team-page__stadium-info">
   <div class="stadium-info_inside">
     <div class="stadium-info_pictures">
@@ -39,7 +37,6 @@
   <div class="team-page__stadium-cover" style="background: {{model.teamColors.primary}}">
     <h2 class="team-page__stadium-title" style="color: {{model.teamColors.secondary}}">{{model.stadiumName}}</h2>
   </div>
-
 </div>
 
 <div class="team-page__info-section">
@@ -50,7 +47,7 @@
       <p class="team__record">{{model.totalRecord}}</p>
       <img class='conference__logo' src="{{model.conferenceImg}}" alt="">
     </div>
-    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.secondary}}">
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}">
       <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
     </div>
     {{/toggle-click}}
@@ -73,7 +70,7 @@
         </ul>
       </div>
     </div>
-    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.secondary}}">
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" >
       <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
     </div>
     {{/toggle-click}}
@@ -97,7 +94,7 @@
         </div>
         <p class="facts__graph">{{model.description}}</p>
       </div>
-      <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.secondary}}" >
+      <div class="team-info__box-cover {{if isShowing 'fade-out'}}" >
         <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
       </div>
       {{/toggle-click}}

@@ -96,6 +96,7 @@
   height: 100%;
   opacity: .9;
   transition: opacity 500ms;
+  background: #fff;
 
   &.fade-out {
     opacity: 0;
