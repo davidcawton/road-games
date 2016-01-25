@@ -60,7 +60,6 @@
   height: 100%;
   text-decoration: none;
   padding: 10px;
-
 }
 
 .activities-pannel__li a {
@@ -78,7 +77,6 @@
   height: 100%;
   font-size: 1.2em;
   text-align: center;
-
   font-family: 'Black Ops One', sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   opacity: .9;
@@ -93,12 +91,14 @@
   text-decoration: none;
 }
 
-.activities-pannel__li:hover {
+.activities-pannel__li:hover  {
   opacity: 1;
+  background: #f2b632
 }
 
-.activities-pannel__li a::active {
+.activities-pannel__li a:hover {
   opacity: 1;
+  background: #f2b632
 }
 
 
