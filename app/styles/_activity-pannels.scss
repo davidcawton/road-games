@@ -67,7 +67,7 @@
   text-decoration: none;
 }
 
-.activities-pannel__li,  {
+.activities-pannel__li li, .activities-pannel__li li a {
   color: #fff;
   flex: 1;
   margin: 1px;
@@ -95,12 +95,6 @@
   opacity: 1;
   background: #f2b632
 }
-
-.activities-pannel__li a:hover {
-  opacity: 1;
-  background: #f2b632
-}
-
 
 //  Pannel
 

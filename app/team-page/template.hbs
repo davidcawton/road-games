@@ -12,12 +12,12 @@
     <div class="pannel__menu-cover" style="background: {{{model.teamColors.accent}}}"></div>
     <div class="pannel-screens">
       <ul class="activities-pannel__ul">
-      {{#link-to 'team-page'}}<li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}">{{model.city}}</li> {{/link-to}}
-      {{#link-to "team-page.activities" "Eat"}}<li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> Eat</li>{{/link-to}}
-      {{#link-to "team-page.activities" "Drink"}}<li class="activities-pannel__li pannel__first" style="background: {{model.teamColors.primary}}"> Drink</li>{{/link-to}}
-      {{#link-to "team-page.activities" "Travel"}}<li class="activities-pannel__li" style="background: {{model.teamColors.primary}}"> Travel</li>{{/link-to}}
-      {{#link-to "team-page.activities" "Stay"}}<li class="activities-pannel__li pannel__last" style="background: {{model.teamColors.primary}}"> Stay</li>{{/link-to}}
-      {{#link-to "team-page.activities" "Sports"}}<li class="activities-pannel__li pannel__last" style="background: {{model.teamColors.primary}}"> Sports</li>{{/link-to}}
+        {{#link-to 'team-page' class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li >{{model.city}}</li> {{/link-to}}
+        {{#link-to "team-page.activities" "Eat" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Eat</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Drink" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Drink</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Travel" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Travel</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Stay" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Stay</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Sports" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Sports</li>{{/link-to}}
       </ul>
     </div>
   </div>
