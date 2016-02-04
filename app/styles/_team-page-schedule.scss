@@ -1,15 +1,4 @@
 //TEAM PAGE SCHEDULE
-
-.schedule-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 400px;
-  width: 500px;
-  background: rgba(37, 40, 57, 0.9);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .schedule__title {
   font-family: 'Black Ops One', sans-serif;
   font-size: 14px;
@@ -22,6 +11,9 @@
 
 .schedule__ul {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
   padding-left: 0;
   margin-left: 5px;
 }

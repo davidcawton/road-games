@@ -57,23 +57,27 @@
 //TEAM INFO BOXES
 .team-page__info-section {
   display: flex;
-  margin: 2em 4em; ;
+  align-content: center;
+  flex-basis:auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2em 4em;
+  opacity: 0.8;
   margin-bottom: 0;
-  justify-content: center;
 }
 
 .team-info__box {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 25%;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
   background: rgba(37, 40, 57, 0.9);
   color: #fff;
   text-shadow: 2px 2px 4px #000;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -101,13 +105,6 @@
   }
 }
 
-.info-center {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
 
 .team-info__box-cover-text {
   position: absolute;
@@ -149,17 +146,6 @@
   to {top: 45%}
 }
 
-.box-record {
-  width: 33.33%;
-}
-
-.box-leaders{
-  width: 33.33%;
-}
-
-.box-about {
-  width: 33.33%;
-}
 
 .info__title {
   text-align: center;
@@ -185,6 +171,10 @@
   padding-top: 20px;
   width: 90px;
   height: 90px;
+}
+
+.stadium-map {
+  height: 300px;
 }
 
 .leaders__list {
@@ -237,15 +227,6 @@
 
 // STADIUM INFO
 
-.team-page__stadium-info {
-  margin: 2em 4em;
-  justify-content: center;
-  position: relative;
-  display: flex;
-  height: 400px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 .team-page__stadium-cover {
   position: absolute;
   display: flex;
@@ -254,49 +235,42 @@
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .8;
+  opacity: .4;
   align-items: center;
-
+  transition: 500ms;
 }
 
 .team-page__stadium-title {
   text-align: center;
+  margin-bottom: 25px;
   width: 100%;
-  font-size: 5em;
+  font-size: 6em;
   font-family: 'Black Ops One', sans-serif;
   opacity: 1;
+  transition: 500ms;
 }
 
-.stadium-info_pictures {
-  display: flex;
-  position: relative;
-  width: 66.66%;
-  justify-content: space-between;
-
+#stadium-pic {
+  margin: 2em 4em;
 }
 
-.stadium-info__img {
-  height: 400px;
-  width: 500px;
-}
-
-.stadium-info_inside {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
-
-.team-page__stadium-info:hover .team-page__stadium-cover {
+#stadium-pic:hover .team-page__stadium-cover {
   opacity: 0;
-  transition: 1000ms
+  transition: 1000ms;
+
+
 }
 
-.team-page__stadium-info:hover .team-page__stadium-title {
+#stadium-pic:hover .team-page__stadium-title {
   opacity: 0;
-  transition: 1000ms
+  transition: 1000ms;
+
 }
 
+#stadium-pic:hover #stadium-cover {
+  opacity: 0;
+  transition: 1000ms;
+}
 
 // DISQUS SECTION
 
