@@ -1,0 +1,119 @@
+{{!-- TEAM PAGE --}}
+<div class="team-page">
+
+  <div class="team-page__header" style="background: url({{model.citySkyline}}) fixed center no-repeat; background-size: cover">
+    <div class="team-page__header-cover" style="background: {{{model.teamColors.secondary}}}"></div>
+    <div class="team-page__header-logo">
+      <img class=header__image src="{{model.teamLogo}}" alt="">
+    </div>
+  </div>
+
+  <div class="activities-pannel__titles" style="background: url({{model.citySkyline}}) fixed center no-repeat; background-size: cover">
+    <div class="pannel__menu-cover" style="background: {{{model.teamColors.accent}}}"></div>
+    <div class="pannel-screens">
+      <ul class="activities-pannel__ul">
+        {{#link-to 'team-page' class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li >{{model.city}}</li> {{/link-to}}
+        {{#link-to "team-page.activities" "Eat" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Eat</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Drink" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Drink</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Travel" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Travel</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Stay" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Stay</li>{{/link-to}}
+        {{#link-to "team-page.activities" "Sports" class="activities-pannel__li"  style="background: {{model.teamColors.primary}}"}}<li > Sports</li>{{/link-to}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{{outlet}}
+
+<div class="team-page__header" id="stadium-pic" style="background: url({{model.stadiumImg}}) fixed center no-repeat; background-size: cover">
+  <div class="team-page__header-cover" id="stadium-cover" style="background: {{{model.teamColors.secondary}}}"></div>
+  <div class="team-page__stadium-cover" style="background: {{model.teamColors.primary}}">
+    <h2 class="team-page__stadium-title" style="color: {{model.teamColors.secondary}}">{{model.stadiumName}}</h2>
+  </div>
+</div>
+
+
+<div class="team-page__info-section" >
+<div class="team-info__box box-record" style="background: {{model.teamColors.primary}}">
+    {{#toggle-click as |isShowing|}}
+      <h3 class="info__title"> The 2016 {{model.name}}</h3>
+      <p class="team__record">{{model.totalRecord}}</p>
+      <img class='conference__logo' src="{{model.conferenceImg}}" alt="">
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.accent}}">
+      <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+    </div>
+    {{/toggle-click}}
+  </div>
+
+<div class="team-info__box" style="background: url({{model.stadiumMap}}) center center; background-size: contain">
+    {{#toggle-click as |isShowing|}}
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.accent}}">
+      <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+    </div>
+    {{/toggle-click}}
+  </div>
+
+<div class="team-info__box" style="background: {{model.teamColors.primary}}">
+    {{#toggle-click as |isShowing|}}
+      <p class="schedule__title">Recent Games</p>
+      {{team-schedule team=model}}
+      <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.accent}}">
+        <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+      </div>
+    {{/toggle-click}}
+  </div>
+
+<div class="team-info__box" style="background: {{model.teamColors.primary}}">
+    {{#toggle-click as |isShowing|}}
+      <p class="facts__graph">{{model.description}}</p>
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.accent}}">
+      <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+    </div>
+    {{/toggle-click}}
+  </div>
+
+
+  <div class="team-info__box"  style="background: {{model.teamColors.primary}}">
+    {{#toggle-click as |isShowing|}}
+      <h3 class="info__title">{{model.name}} Leadership</h3>
+      <div class="leaders__list">
+        <ul class="leaders__ul" id="leaders">
+          <li class="team__leaders-li">Team Owner:</li>
+          <li class="team__leaders-li">General Manager:</li>
+          <li class="team__leaders-li">Coach:</li>
+        </ul>
+        <ul class="leaders__ul" id="leader-answers">
+          <li class="team__leaders-li">{{model.owner}}</li>
+          <li class="team__leaders-li">{{model.owner}}</li>
+          <li class="team__leaders-li">{{model.coach}}</li>
+        </ul>
+      </div>
+    <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.accent}}" >
+      <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+    </div>
+    {{/toggle-click}}
+    </div>
+    <div class="team-info__box" style="background: {{model.teamColors.primary}}">
+      {{#toggle-click as |isShowing|}}
+        <h3 class="info__title">About The {{model.name}}</h3>
+        <div class="leaders__list">
+          <ul class="leaders__ul" id="leaders">
+            <li class="team__leaders-li">Year Established:</li>
+            <li class="team__leaders-li">Conference:</li>
+            <li class="team__leaders-li">Division:</li>
+          </ul>
+          <ul class="leaders__ul" id="leader-answers">
+            <li class="team__leaders-li">{{model.established}}</li>
+            <li class="team__leaders-li">{{model.conference}}</li>
+            <li class="team__leaders-li">{{model.division}}</li>
+          </ul>
+        </div>
+      <div class="team-info__box-cover {{if isShowing 'fade-out'}}" style="background: {{model.teamColors.accent}}" >
+        <img class="cover__image cover__image-sm" src="{{model.teamLogo}}" alt="">
+      </div>
+      {{/toggle-click}}
+    </div>
+</div>
+<div class="disqus-section">
+  {{disqus-comments identifier=model.id title=model.name}}
+</div>

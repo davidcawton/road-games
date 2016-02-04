@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
+    apiHost: 'https://road-games.herokuapp.com',
     modulePrefix: 'road-games',
     environment: environment,
     baseURL: '/',
@@ -18,6 +19,25 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    // jscs: disable
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'connect-src': "'self' https://road-games.herokuapp.com",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+      'media-src': "'self'"
+    },
+
+    'ember-simple-auth': {
+      routeAfterAuthentication: 'admin',
+    },
+
+    disqus: {
+      shortname: 'roadgame'
     }
   };
 

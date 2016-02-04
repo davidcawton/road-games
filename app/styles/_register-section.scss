@@ -1,0 +1,42 @@
+// USER REGISTRATION SECTION
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-side {
+  text-align: center;
+  padding: 10px;
+}
+
+.register-title {
+  font-family: 'Black Ops One', sans-serif;
+  color: #1b66d6;
+
+}
+
+.register-form__graph {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+
+.register-form__input {
+  margin: 5px;
+}
+
+.register-form__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.register-form__btn {
+  list-style: none;
+  margin: 5px;
+}

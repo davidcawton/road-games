@@ -1,0 +1,24 @@
+<h1 class="admin-selection__title">Admin</h1>
+<ul class="admin-selections">
+  {{#link-to 'admin.teams'}}
+    <li class="admin-selection__li">
+      <img class='admin-selection__img' src="helmets/jaguars.jpg" alt="">
+      <section class="admin-selection__img-cover"></section>
+      <p class="selection-title" id="teams">Teams</p>
+    </li>
+  {{/link-to}}
+  {{#link-to 'admin.games'}}
+    <li class="admin-selection__li">
+      <img class='admin-selection__img' src="team-logos/jets.png" alt="">
+      <div class="admin-selection__img-cover"> </div>
+      <p class="selection-title" id="games">Games</p>
+    </li>
+    {{/link-to}}
+    {{#link-to 'admin.activities'}}
+      <li class="admin-selection__li">
+        <img class='admin-selection__img' src="/beach.jpg" alt="">
+        <div class="admin-selection__img-cover"> </div>
+        <p class="selection-title">Activities</p>
+      </li>
+    {{/link-to}}
+</ul>

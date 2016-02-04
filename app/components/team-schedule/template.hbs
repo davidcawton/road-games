@@ -1,0 +1,12 @@
+
+  {{#each team.games as |game|}}
+    <ul class="schedule__ul">
+      <li class="schedule__li"><img src="{{game.awayTeam.teamLogo}}" alt="" class="schedule-logo"></li>
+      <li class="schedule__li hometeam">{{game.awayTeam.name}}</li>
+      <li class="schedule__li">{{game.awayScore}}</li>
+      <li class="schedule__li">@</li>
+      <li class="schedule__li awayteam">{{game.homeTeam.name}}</li>
+      <li class="schedule__li">{{game.homeScore}}</li>
+      <li class="schedule__li"><img src="{{game.homeTeam.teamLogo}}" alt="" class="schedule-logo"></li>
+    </ul>
+  {{/each}}

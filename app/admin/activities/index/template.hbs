@@ -1,0 +1,28 @@
+<div class="activity-list">
+  <h2 class="admin-activities__title"> Activities </h2>
+  <div class="activity-list__cards">
+  {{#each model as |activityList|}}
+  {{#link-to 'admin.activities.details' activityList}}
+    <ul class="admin-activity__ul">
+      <li class="activity-list__card">
+        <img class="activity-card__img" src="{{activityList.pictureUrl}}" alt="">
+        <div class="activity-card__img-cover"></div>
+        <p class="activity-card__title activity-city">{{activityList.team.city}} </p>
+        <p class="activity-card__title activity-team">{{activityList.team.name}}: </p>
+        <p class="activity-card__title activity-category">{{activityList.category}}: </p>
+        <p class="activity-card__title activity-name">{{activityList.name}} </p>
+      </li>
+    </ul>
+    {{/link-to}}
+    {{/each}}
+  </div>
+</div>
+
+
+<ul class="admin-activity__nav">
+  <li class='admin-activity_nav-li'>
+  {{#link-to 'admin.activities.new'}}
+    {{#mdl-button class='new-activity__btn' icon="add"}}{{/mdl-button}}<span class="new-activity__btn-title">New</span>
+  {{/link-to}}
+  </li>
+</ul>

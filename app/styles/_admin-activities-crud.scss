@@ -1,0 +1,94 @@
+//NEW / EDIT ROUTE
+
+.admin-activity-form__title {
+  font-family: 'Black Ops One', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+//DETAILS //
+
+.activity-detail__title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  font-family: 'Black Ops One', sans-serif;
+  text-align: center;
+  width: 400px;
+}
+
+
+.activity-details__icon {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.activity-details {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  background: #faf9fe;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.activity-details__ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 2em;
+}
+
+.activity-cat {
+  font-weight: bold;
+  margin: 15px;
+}
+
+.activity-answer {
+  text-align: left;
+  padding-left: 20px;
+  margin: 15px;
+}
+
+//BUTTONS
+
+.admin-activity-details__nav , .admin-activity-form__nav{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  position: fixed;
+  justify-content: flex-start;
+  bottom: 5%;
+  list-style: none;
+  padding-left: 0;
+  background-color: rbga(250, 250, 250, 0.5);
+
+}
+
+.admin-activity-form__nav {
+  padding-left: 10px;
+}
+
+.activities-details__nav-li,  .activities-details__nav-li a, .activity-form__nav-li .activity-form__nav-li a {
+  font-size: 10px;
+  font-family: 'Black Ops One', sans-serif;
+  text-decoration: none;
+  color: #111;
+  padding-left: 10px;
+}
+
+.activity-details__nav-li, {
+  padding-left:10px;
+}
+
+.ad__title, .ad__title a {
+  font-size: 10px;
+  font-family: 'Black Ops One', sans-serif;
+  color: #111;
+  opacity: .3;
+}

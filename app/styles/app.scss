@@ -1,1 +1,64 @@
 @import 'material-design-lite';
+
+
+html {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  position: absolute;
+  top: 0;
+  // background: url('/feild.jpg') center fixed no-repeat;
+  background-size: cover;
+  margin-bottom: 2rem;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+//INDEX - LANDING PAGE
+@import 'index';
+
+// REGISTRATION / LOGIN
+@import '_login-section';
+@import '_register-section';
+
+//CLIENT-SIDE
+@import '_client-side-nav';
+@import '_teams';
+@import '_team-page';
+@import '_team-page-schedule';
+@import '_activity-pannels';
+
+
+//ADMIN-SIDE
+@import '_admin-nav';
+@import '_admin-index';
+
+    //Admin Game
+@import '_admin-games-index';
+@import '_admin-games-crud';
+@import '_admin-create-game-partial';
+
+    //Admin Team
+@import '_admin-teams-index';
+@import '_admin-teams-crud';
+@import '_admin-create-team-partial';
+
+  //Admin Activities
+@import '_admin-activities-index';
+@import '_admin-activities-crud';
+@import '_admin-create-activity';
+
+@import 'smaller-screen'; //1600px-1024px
+@import 'tablet-view'; //1023px - 730px
+@import 'small-tablet'; //729px -480px
+@import 'mobile-view'; //479px min.

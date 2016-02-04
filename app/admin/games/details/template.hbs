@@ -1,0 +1,33 @@
+<h2 class='game-detail__title'>{{model.awayTeam.name}} vs.  {{model.homeTeam.name}}</h2>
+
+<div class="game-details">
+  <ul class="game-details__ul">
+    <li class="game-details__li game-cat_li">Game Date: </li>
+    <li class="game-details__li game-cat_li">Home Team: </li>
+    <li class="game-details__li game-cat_li">Home Score: </li>
+    <li class="game-details__li game-cat_li">Away Team:</li>
+    <li class="game-details__li game-cat_li">Away Score:</li>
+    <li class="game-details__li game-cat_li">Winner:</li>
+  </ul>
+  <ul class="game-details__ul">
+    <li class="game-details__li game-answers_li">{{model.date}}</li>
+    <li class="game-details__li game-answers_li">{{model.homeTeam.name}}</li>
+    <li class="game-details__li game-answers_li">{{model.homeScore}}</li>
+    <li class="game-details__li game-answers_li">{{model.awayTeam.name}}</li>
+    <li class="game-details__li game-answers_li">{{model.awayScore}}</li>
+    <li class="game-details__li game-answers_li">{{model.winningTeam.name}}</li>
+  </ul>
+</div>
+
+<ul class="admin-game-details__nav">
+  <li class='game-details__nav-li'>
+  {{#link-to 'admin.games.edit' model.id}}
+    {{#mdl-button class='gd__btn' icon="edit"}}{{/mdl-button}}<span class="gd__title">Edit</span>
+  {{/link-to}}
+  </li>
+  <li class='game-details__nav-li'>
+  {{#link-to 'admin.games'}}
+    {{#mdl-button class='gd__btn' icon="arrow_back"}}{{/mdl-button}}<span class="gd__title">Back</span>
+  {{/link-to}}
+  </li>
+</ul>

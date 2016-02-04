@@ -1,0 +1,46 @@
+<div class="create-a-game__form">
+  <ul class="create-a-game__ul">
+    <li class="create-a-game__li">
+      <label class='game-label'>Home Team: <strong>{{if model.game.homeTeam model.game.homeTeam.name 'Choose a Home Team'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.game.homeTeam) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-a-game__li">{{mdl-textfield class="new-game-form__input" label='Home Score' type='number' value=formValues.homeScore}}</li>
+  </ul>
+
+  <ul class="create-a-game__ul">
+    <li class="create-a-game__li">
+      <label class='game-label'>Away Team: <strong>{{if model.game.awayTeam model.game.awayTeam.name 'Choose an Away Team'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.game.awayTeam) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-a-game__li">{{mdl-textfield class="new-game-form__input" label='Away Score' type='number' value=formValues.awayScore}}</li>
+  </ul>
+
+  <ul class="create-a-game__ul">
+    <li class="create-a-game__li">
+      <label class='game-label'>Winner: <strong>{{if model.game.winningTeam model.game.winningTeam.name 'Choose a Winner'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.game.winningTeam) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-a-game__li">
+      <label>
+        Game Day:
+        {{#pikaday-with-time startValue=formValues.date binding=formValues.date as |date|}}
+          <div class="mdl-textfield mdl-js-textfield">
+            {{pikaday-input class="mdl-textfield__input" value=date}}
+          </div>
+        {{/pikaday-with-time}}
+      </label>
+    </li>
+  </ul>
+</div>

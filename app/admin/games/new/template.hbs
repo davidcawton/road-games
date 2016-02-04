@@ -1,0 +1,15 @@
+<h1 class="new-game-form__title">Create A New Game</h1>
+
+{{#simple-form class="new-game-form" onsubmit="addNewGame" as |formValues|}}
+  {{partial 'admin/games/form'}}
+
+  <ul class="admin-game-form__nav">
+    <li class='game-form__nav-li'>
+      {{#mdl-button class='form-game-btn' icon='add'}}{{/mdl-button}}<span class="form__btn-title">Save</span>
+    </li>
+    <li class='game-form__nav-li'>
+      {{#link-to 'admin.games'}}{{#mdl-button class='form-game-btn' icon='arrow_back'}}{{/mdl-button}}<span class="form__btn-title">Back</span>{{/link-to}}
+    </li>
+  </ul>
+
+  {{/simple-form}}

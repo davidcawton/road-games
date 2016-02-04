@@ -1,0 +1,38 @@
+<div class="create-an-activity__form">
+  <ul class="create-an-activity_ul">
+    <li class="create-an-activity__li">
+      <label class='new-activity__label'>Category: <strong>{{if formValues.category formValues.category 'Chose a Category'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#with-service 'activity-categories' as |activityCategories|}}
+        {{log activityCategories}}
+          {{#each activityCategories.categories as |category|}}
+            {{#mdl-value-item binding=(mut formValues.category) value=category}}{{category}}{{/mdl-value-item}}
+          {{/each}}
+        {{/with-service}}
+      {{/mdl-menu}}
+      <label class='new-activity__label'>Activity Type: <strong>{{if formValues.name formValues.name 'Chose an Activity'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#with-service 'activity-names' as |activityNames|}}
+        {{log activityNames}}
+          {{#each activityNames.names as |name|}}
+            {{#mdl-value-item binding=(mut formValues.name) value=name}}{{name}}{{/mdl-value-item}}
+          {{/each}}
+        {{/with-service}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-an-activity__li">{{mdl-textarea class='activity-form__input' label='Airport Code' value=formValues.airportCode}}</li>
+    <li class="create-an-activity__li">
+      {{log model.activity.team}}
+      <label class='new-activity__label'><strong>{{if model.activity.team.name model.activity.team.name 'Chose a Team'}}</strong></label>
+      {{#mdl-menu click=(prevent-default)}}
+        {{#each model.teams as |team|}}
+          {{#mdl-value-item binding=(mut model.activity.team) value=team}}{{team.name}}{{/mdl-value-item}}
+        {{/each}}
+      {{/mdl-menu}}
+    </li>
+    <li class="create-an-activity__li">{{mdl-textarea class='activity-form__input' label='Name' value=formValues.activityName}}</li>
+    <li class="create-an-activity__li">{{mdl-textarea class='activity-form__input' label='Description' value=formValues.description}}</li>
+    <li class="create-an-activity__li">{{mdl-textarea class='activity-form__input' label='Address' value=formValues.address}}</li>
+    <li class="create-an-activity__li">{{mdl-textarea class='activity-form__input' label='Link' value=formValues.linkUrl}}</li>
+  </ul>
+</div>

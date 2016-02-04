@@ -1,0 +1,14 @@
+<h1 class="new-team-form__title">Create A New Team</h1>
+
+{{#simple-form class="new-team-form" onsubmit="addNewTeam" as |formValues|}}
+  {{partial 'admin/teams/form'}}
+
+  <ul class="admin-team-form__nav">
+    <li class='team-form__nav-li'>
+      {{#mdl-button class='form-team-btn' icon='add'}}{{/mdl-button}}<span class="form__btn-title">Save</span>
+    </li>
+    <li class='team-form__nav-li'>
+      {{#link-to 'admin.teams'}}{{#mdl-button class='form-team-btn' icon='arrow_back'}}{{/mdl-button}}<span class="form__btn-title">Back</span>{{/link-to}}
+    </li>
+  </ul>
+{{/simple-form}}

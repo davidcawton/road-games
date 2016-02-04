@@ -1,0 +1,89 @@
+<div class="team-detail__title-section">
+  <img src="{{model.wordMark}}" alt="" class="team-details__word-mark">
+</div>
+<div class="team-details">
+  <ul class="team-details__ul team-detail_cat">
+    <li class="team-details__li team-cat_li">Year Established:</li>
+    <li class="team-details__li team-cat_li">Record:</li>
+    <li class="team-details__li team-cat_li">Where Do the {{model.name}} play?</li>
+    <li class="team-details__li team-cat_li">Airport</li>
+    <li class="team-details__li team-cat_li">Team Owner:</li>
+    <li class="team-details__li team-cat_li">General Manager:</li>
+    <li class="team-details__li team-cat_li">Coach:</li>
+    <li class="team-details__li team-cat_li">Coach Record:</li>
+    <li class="team-details__li team-cat_li">Star Player:</li>
+  </ul>
+  <ul class="team-details__ul team-details_answers">
+    <li class="team-details__li"> {{model.established}}</li>
+    <li class="team-details__li">{{model.totalRecord}}</li>
+    <li class="team-details__li">{{model.stadiumName}}</li>
+    <li class="team-details__li">{{model.airport}}</li>
+    <li class="team-details__li">{{model.owner}}</li>
+    <li class="team-details__li">{{model.generalManager}}</li>
+    <li class="team-details__li">{{model.coach}}</li>
+    <li class="team-details__li">{{model.coachRecord}}</li>
+    <li class="team-details__li">{{model.startPlayer}}</li>
+  </ul>
+</div>
+<div class="team-details__description">
+  <h3> 2016 Notes</h3>
+  <p>{{model.description}}</p>
+</div>
+<div class="team-details__description">
+  <h3> About {{model.city}}</h3>
+  <p>{{model.cityDescription}}</p>
+</div>
+<div class="team-details__color-pallet">
+  <h3 class="color__pallet-title">Team Colors</h3>
+  <div class="color__pallet" id='color__pallet-light' style="background: {{model.teamColors.primary}}">
+    <p class="color__pallet-type">Primary</p>
+  </div>
+  <div class="color__pallet"  style="background: {{model.teamColors.secondary}}">
+    <p class="color__pallet-type">Secondary</p>
+  </div>
+  <div id="accent-pallet" class="color__pallet last__pallet" style="background: {{model.teamColors.accent}}">
+    <p class="color__pallet-type">Accent</p>
+  </div>
+  <img src="{{model.imgUrl}}" alt="" class="team-details__img">
+
+</div>
+
+
+<div class="team-details__cards">
+  <div class="team-details__picture-card">
+    <img class="card__image" src="{{model.citySkyline}}" alt="">
+    <p class="card__caption">{{model.city}}</p>
+  </div>
+  <div class="team-details__picture-card">
+    <img class="card__image" src="{{model.stadiumImg}}" alt="">
+    <p class="card__caption">{{model.stadiumName}}</p>
+  </div>
+  <div class="team-details__picture-card">
+    <img class="card__image" src="{{model.stadiumMap}}" alt="">
+    <p class="card__caption">{{model.stadiumName}} Map</p>
+  </div>
+  <div class="team-details__picture-card" >
+    <img class="card__image" src="{{model.conferenceImg}}" alt="">
+    <p class="card__caption">Conference: {{model.conference}} {{model.division}}</p>
+  </div>
+
+
+</div>
+
+<ul class="admin-team-details__nav">
+  <li class='team-details__nav-li'>
+  {{#link-to 'admin.teams.edit' model}}
+    {{#mdl-button class='td__btn' icon="edit"}}{{/mdl-button}}<span class="td__title">Edit</span>
+  {{/link-to}}
+  </li>
+  <li class='team-details__nav-li'>
+  {{#link-to 'admin.teams'}}
+    {{#mdl-button class='td__btn' icon="arrow_back"}}{{/mdl-button}}<span class="td__title">Back</span>
+  {{/link-to}}
+  </li>
+</ul>
+
+<style>
+
+
+</style>

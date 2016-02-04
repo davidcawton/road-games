@@ -1,0 +1,22 @@
+<div class="admin-teams">
+  <h2 class="admin-team__title">Teams</h2>
+  <ul class="admin-team__list">
+    {{#each model as |teamList|}}
+      {{#link-to 'admin.teams.details' teamList}}
+      <li class="admin-team__card">
+        <img src="{{teamList.imgUrl}}" alt="" class="team-card__logo">
+        <div class="team-card__logo-cover"> </div>
+        <p class='team-card__title team-city'>{{teamList.city}}</p><br>
+        <p class='team-card__title team-name'>{{teamList.name}}</p>
+      </li>
+    {{/link-to}}
+    {{/each}}
+  </ul>
+</div>
+<ul class="admin-team__nav">
+  <li class='admin-team_nav-li'>
+  {{#link-to 'admin.teams.new'}}
+    {{#mdl-button class='new-team__btn' icon="add"}}{{/mdl-button}}<span class="new-team__title">New</span>
+  {{/link-to}}
+  </li>
+</ul>

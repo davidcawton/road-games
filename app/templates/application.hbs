@@ -1,13 +1,35 @@
-<div class="mdl-grid">
-{{#mdl-card title='Welcome to Ember.js'}}
-  <div class="mdl-card__supporting-text">
-    You have successfully installed <a href='https://github.com/truenorth/ember-material-lite' target='_blank'>ember-material-lite</a>. It's based on an awesome google project called <a href='https://github.com/google/material-design-lite' target='_blank'>Material Design Lite</a>
+
+<div class="index">
+  <div class="index-hero__left">
+    <p class="index-subtitle">PUT ON FOR YOUR CITY, IN ANOTHER.</p>
+    <p class="index-subtitle-p">Road Warrior is the App that lets you follow your favorite team, wherever they go. Check out each team's city profile, full of events, travel, and stadium information! Become a Road Warrior Today</p>
   </div>
-  {{#mdl-card-actions}}
-    {{mdl-button text='Test Button'}}
-  {{/mdl-card-actions}}
-{{/mdl-card}}
+  <div class="index-hero__right">
+    {{#link-to 'admin'}}
+    <ul class="index-hero__admin">
+      <li class="hero-link_li"><p class="hero_admin-link">Admin</p></li>
+      <li class="hero-link_li">{{#mdl-button class="hero_admin-link" icon="fingerprint"}}{{/mdl-button}}</li>
+   </ul>
+   {{/link-to}}
+    {{#link-to 'index'}}<h1 class="index-title">Road Warrior </h1>{{/link-to}}
+    <div class="index-hero-links">
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'teams'}}{{#mdl-button icon='apps' class="link-button"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'teams'}}Teams{{/link-to}}</li>
+      </ul>
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'register'}}{{#mdl-button icon="face"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'teams'}}Sign Up{{/link-to}}</li>
+      </ul>
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'index' action='logout'}}{{#mdl-button icon="pan_tool"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'index'}}Logout{{/link-to}}</li>
+      </ul>
+      <ul class="index-hero-links__ul">
+        <li class='hero__link'>{{#link-to 'login'}}{{#mdl-button icon="vpn_key"}}{{/mdl-button}}{{/link-to}}</li>
+        <li class='hero__link'>{{#link-to 'login'}}Login{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
 </div>
-
-
-{{outlet}}
+  {{outlet}}

@@ -1,0 +1,20 @@
+{{outlet}}
+
+<h2 class="edit-game-form__title">
+    {{model.game.awayTeam.name}}
+   @ {{model.game.homeTeam.name}}
+ </h2>
+
+{{#simple-form class="new-game-form" startingValues=model.game onsubmit="saveGame" as |formValues|}}
+  {{partial 'admin/games/form'}}
+
+  <ul class="admin-game-form__nav">
+    <li class='game-form__nav-li'>
+      {{#mdl-button class='form-game-btn' icon='add'}}{{/mdl-button}}<span class="form__btn-title">Save</span>
+    </li>
+    <li class='game-form__nav-li'>
+      {{#mdl-button action='removeGame' class='form-game-btn' icon='delete'}}{{/mdl-button}}<span class="form__btn-title">Trash</span></li>
+  </ul>
+
+
+{{/simple-form}}

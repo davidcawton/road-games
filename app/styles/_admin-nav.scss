@@ -1,0 +1,40 @@
+//ADMIN NAV
+
+  .admin-nav {
+    display: flex;
+    width: 300px;
+    justify-content: flex-start;
+    margin-top: 5px;
+    margin-left: 0;
+    position: fixed;
+  }
+
+  .admin-nav__ul {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+    font-size: 10px;
+
+
+
+  }
+
+  .admin-nav__li, .admin-nav__li a {
+    font-family: 'Black Ops One', sans-serif;
+    text-decoration: none;
+    height: 100%;
+    padding-left: 0;
+    margin-bottom: 4px;
+    color: #111;
+  }
+
+.nav-title {
+  opacity: 0;
+}
+
+.admin-nav__li:hover .nav-title {
+  opacity: .50;
+}

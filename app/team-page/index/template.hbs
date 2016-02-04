@@ -1,0 +1,22 @@
+
+{{!-- INDEX PANNEL --}}
+
+<div class="pannel">
+  <div class="pannle-title-section">
+    <p class='pannel-description__graph'>{{model.team.cityDescription}}</p>
+  </div>
+  <div class="pannel-info">
+    {{#each model.activities as |activity|}}
+      <ul class="pannel__ul">
+        <li class="pannel__li pannel-li__icon"><a href="{{activity.linkUrl}}" target="_blank" ><img src="{{activity.activityNameIcon}}" alt=""></a></li>
+        <li class="pannel__li pannel-li__title"><a href="{{activity.linkUrl}}" target="_blank" >{{activity.activityName}}</a></li>
+        <li class="pannel__li pannel-li__description">{{activity.description}}</li>
+        <li class="pannel__li">{{activity.address}}</li>
+        {{#if activity.airportCode}}
+        <li class="pannel__li">{{activity.airportCode}}</li>
+        {{/if}}
+      </ul>
+    {{/each}}
+  </div>
+
+</div>

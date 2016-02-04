@@ -1,0 +1,14 @@
+{{outlet}}
+
+
+<div class="login">
+  {{#simple-form onsubmit="loginUser" as |login|}}
+  <ul class="login-form">
+    <li class="login-form__input">{{mdl-textfield label="Email" value=login.email}}</li>
+    <li class="login-form__input">{{mdl-textfield label="Password" type="password" value=login.password}}</li>
+    <li class="login-form__input">
+      {{#mdl-button}}Login{{/mdl-button}}
+    </li>
+  </ul>
+  {{/simple-form}}
+</div>

@@ -1,0 +1,170 @@
+//TABLET SCREENS
+
+@media only screen and (max-width: 1023px) and (min-width: 730px) {
+
+// INDEX
+//
+
+  .index {
+    margin-bottom: 0;
+  }
+  .index-subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    height: 20%;
+  }
+
+  .index-subtitle-p {
+    font-size: 12px;
+  }
+
+  .index-title {
+    font-size: 60px;
+  }
+
+  .index-header h1 {
+    font-size: 4em;
+  }
+
+  .index-middle ul {
+    font-size: 1em;
+  }
+
+  .team-page__stadium-info {
+    flex-direction: column;
+    height: 100%;
+
+  }
+
+  .stadium-info_inside {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .stadium-info_pictures {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+  }
+
+  .stadium-info__img {
+    margin: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .schedule-block {
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 1em;
+    height: 100px;
+  }
+
+  .team-page__stadium-cover  {
+    height: 100%;
+  }
+
+  .team-page__stadium-title {
+    text-align: center;
+    width: 100%;
+    font-size: 5em;
+    font-family: 'Black Ops One', sans-serif;
+    opacity: 1;
+  }
+
+//LOGIN FORM
+
+  .login-form {
+    flex-direction: column;
+  }
+
+
+//REGISTRATION FORM
+
+  .register {
+    flex-direction: column;
+  }
+
+
+//TEAM PAGES
+//
+  .team-page {
+    margin-top: 1em;
+    padding-top: 0;
+  }
+
+
+  .team-page__haeder {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .team-page__title  {
+    font-size: 40px;
+  }
+
+  .team-page__sub-title {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .team-page__info-section {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .team-info__box {
+    margin: 1em;
+    width: 90%;
+    height: 300px;
+  }
+
+  .cover__image {
+    height: 70%;
+  }
+
+
+
+  //ACTIVITY PANNEL
+
+  .activities-pannel__titles {
+    flex-direction: column;
+    margin: 2em;
+  }
+
+  .pannel-title, .pannel-title a {
+    margin-bottom: 1em;
+  }
+
+  .activities-pannel__ul {
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .activities-pannel__li, .activities-pannel__li a {
+    width: 400px;
+  }
+
+  .pannel-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pannel-info ul {
+    width: 90%;
+    justify-content: center;
+  }
+
+  //ADMIN
+
+    .game-details, .activity-details, .team-details, .team-details__description {
+      width: 500px;
+    }
+
+
+
+}

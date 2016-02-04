@@ -1,0 +1,29 @@
+import Ember from 'ember';
+import moment from 'moment';
+
+export default Ember.Route.extend({
+  model(params) {
+    return Ember.RSVP.hash({
+      game: this.store.findRecord('game', params.game_id),
+      teams: this.store.findAll('team'),
+    });
+  },
+
+  actions: {
+    saveGame(formData) {
+      let game = this.modelFor(this.routeName).game;
+
+      game.setProperties(formData);
+      game.save().then(() => {
+        this.transitionTo('admin.games.details', game);
+      });
+    },
+
+    removeGame() {
+      let game = this.modelFor(this.routeName).game;
+      game.destroyRecord().then(() => {
+        this.transitionTo('admin.games');
+      });
+    },
+  },
+});

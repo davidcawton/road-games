@@ -1,0 +1,33 @@
+<div class="admin-games">
+  <h2 class="admin-games__title">Current Games</h2>
+
+
+  <div class="admin-game-list">
+    {{#each model as |gameList|}}
+    {{#link-to 'admin.games.details' gameList}}
+    <ul class="admin-game__ul">
+      <li class="admin-game__card awayTeam_card">
+        <img class='game-card__img' src="{{gameList.awayTeam.imgUrl}}" alt="">
+        <div class="game-card__cover awayTeam_cover"> </div>
+        <p class="game-card__title awayTeam_title">{{gameList.awayTeam.name}}</p>
+        <p class="game-card__score awayTeam_score">{{gameList.awayScore}}</p>
+      </li>
+      <li class="admin-game__card homeTeam_card">
+        <img class='game-card__img' src="{{gameList.homeTeam.imgUrl}}" alt="">
+        <div class="game-card__cover homeTeam_cover"> </div>
+        <p class="game-card__title homeTeam_title">{{gameList.homeTeam.name}}</p>
+        <p class="game-card__score homeTeam_score">{{gameList.homeScore}}</p>
+      </li>
+    </ul>
+    {{/link-to}}
+    {{/each}}
+  </div>
+</div>
+
+<ul class="admin-game__nav">
+  <li class='admin-game_nav-li'>
+  {{#link-to 'admin.games.new'}}
+    {{#mdl-button class='new-game__btn' icon="add"}}{{/mdl-button}}<span class="new-game__title">New</span>
+  {{/link-to}}
+  </li>
+</ul>
